@@ -9,47 +9,48 @@
     <title>Геномед Ростов-на-Дону</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-info">
-                <img src="./assets/image/logo.svg" alt="логотип" class="logo">
-                <div class="logo-desc">
-                    <div class="logo-desc__title">Медико-генетический центр</div>
-                    <div class="logo-desc__subtitle">Лаборатория молекулярной патологии Ростова-на-Дону</div>
-                </div>
-                <div class="address">г. Ростов-на-Дону, ул. Козлова, 65е</div>
-                <div class="phone">8 (800) 333-45-38</div>
-                <a href="#" class="btn-white">Заказать звонок</a>
-            </div>
-        </div>
-    </header>
-    <section class="nav">
-        <div class="container">
-            <nav>
-                <div class="nav-catalog">
-                    <div class="burger">
-                        <div class="burger-line line-first"></div>
-                        <div class="burger-line line-second"></div>
-                        <div class="burger-line line-third"></div>
-                    </div>
-                    <p class="nav-catalog__title">Услуги</p>
-                </div>
-                <ul class="nav-items">
-                    <li><a href="#">О центре</a></li>
-                    <li><a href="#">Врачи</a></li>
-                    <li><a href="#">Отзывы</a></li>
-                    <li><a href="#">Акции</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-                <a href="#" class="analyzes">Узнать результаты анализа</a>
-                <div class="eye">
-                    <a href="#">
-                        <img src="./assets/image/glasses.svg" alt="Версия для слабовидящих">
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </section>
+<!--    <header>-->
+<!--        <div class="container">-->
+<!--            <div class="header-info">-->
+<!--                <img src="./assets/image/logo.svg" alt="логотип" class="logo">-->
+<!--                <div class="logo-desc">-->
+<!--                    <div class="logo-desc__title">Медико-генетический центр</div>-->
+<!--                    <div class="logo-desc__subtitle">Лаборатория молекулярной патологии Ростова-на-Дону</div>-->
+<!--                </div>-->
+<!--                <div class="address">г. Ростов-на-Дону, ул. Козлова, 65е</div>-->
+<!--                <div class="phone">8 (800) 333-45-38</div>-->
+<!--                <a href="#" class="btn-white">Заказать звонок</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </header>-->
+<!--    <section class="nav">-->
+<!--        <div class="container">-->
+<!--            <nav>-->
+<!--                <div class="nav-catalog">-->
+<!--                    <div class="burger">-->
+<!--                        <div class="burger-line line-first"></div>-->
+<!--                        <div class="burger-line line-second"></div>-->
+<!--                        <div class="burger-line line-third"></div>-->
+<!--                    </div>-->
+<!--                    <p class="nav-catalog__title">Услуги</p>-->
+<!--                </div>-->
+<!--                <ul class="nav-items">-->
+<!--                    <li><a href="#">О центре</a></li>-->
+<!--                    <li><a href="#">Врачи</a></li>-->
+<!--                    <li><a href="#">Отзывы</a></li>-->
+<!--                    <li><a href="#">Акции</a></li>-->
+<!--                    <li><a href="#">Контакты</a></li>-->
+<!--                </ul>-->
+<!--                <a href="#" class="analyzes">Узнать результаты анализа</a>-->
+<!--                <div class="eye">-->
+<!--                    <a href="#">-->
+<!--                        <img src="./assets/image/glasses.svg" alt="Версия для слабовидящих">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </nav>-->
+<!--        </div>-->
+<!--    </section>-->
+
     <section class="banner">
         <div class="container">
             <div class="breadcrumbs">
@@ -57,9 +58,9 @@
                 <span class="separator">/</span>
                 <span>Услуги</span>
             </div>
-            <div class="banner-title">
+            <h1 class="banner-title">
                 Услуги
-            </div>
+            </h1>
             <div class="search">
                 <div class="search-wrap">
                     <input type="search" placeholder="Введите свой запрос">
@@ -74,23 +75,173 @@
                 <div class="sidebar">
                     <div class="sidebar-title">Разделы</div>
                         <ul class="sidebar-nav">
-                            <li><a href="#">Генетика</a></li>
-                            <li><a href="#">УЗИ</a></li>
-                            <li><a href="#">Видео-ЭЭГ мониторинг</a></li>
-                            <li><a href="#">Неврология</a></li>
-                            <li><a href="#">Эпилептология</a></li>
-                            <li><a href="#">Акушерство и гинекология</a></li>
-                            <li><a href="#">Эндокринология</a></li>
-                            <li><a href="#">Инвазивная диагностика</a></li>
-                            <li><a href="#">Консилиумы</a></li>
-                            <li><a href="#">Аллергология и иммунология</a></li>
+                            <li><a href="#genetics">Генетика</a></li>
+                            <li><a href="#uzi">УЗИ</a></li>
+                            <li><a href="#video-eeg">Видео-ЭЭГ мониторинг</a></li>
+                            <li><a href="#neurology">Неврология</a></li>
+                            <li><a href="#epileptology">Эпилептология</a></li>
+                            <li><a href="#gynecology">Акушерство и гинекология</a></li>
+                            <li><a href="#endocrinology">Эндокринология</a></li>
+                            <li><a href="#invas-diagn">Инвазивная диагностика</a></li>
+                            <li><a href="#consiliums">Консилиумы</a></li>
+                            <li><a href="#allerg-immun">Аллергология и иммунология</a></li>
                         </ul>
                 </div>
                 <div class="services">
-                    <div class="services-title">Популярные услуги</div>
+                    <div class="popular-services">
+                        <div class="popular-services_title">Популярные услуги</div>
+                        <ul class="popular-services_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">Анализы ДНК</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Анализы ДНК</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="genetics">
+                        <div class="services-subsection_title">Генетика</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="uzi">
+                        <div class="services-subsection_title">Узи</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="video-eeg">
+                        <div class="services-subsection_title">Видео-ЭЭГ мониторинг</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="neurology">
+                        <div class="services-subsection_title">Неврология</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="epileptology">
+                        <div class="services-subsection_title">Эпилептология</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="gynecology">
+                        <div class="services-subsection_title">Акушерство и гинекология</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="endocrinology">
+                        <div class="services-subsection_title">Эндокринология</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="invas-diagn">
+                        <div class="services-subsection_title">Инвазивная диагностика</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="consiliums">
+                        <div class="services-subsection_title">Консилиумы</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                        </ul>
+                    </div>
+                    <div class="services-subsection" id="allerg-immun">
+                        <div class="services-subsection_title">Аллергология и иммунология</div>
+                        <ul class="services-subsection_content">
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                            <li><a href="#">Доставка биоматериала</a></li>
+                            <li><a href="#">УЗИ для беременных</a></li>
+                            <li><a href="#">УЗИ Общее</a></li>
+                            <li><a href="#">УЗИ печени</a></li>
+                            <li><a href="#">Консультация врача-генетика</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+<script src="./assets/js/main.js"></script>
 </body>
 </html>

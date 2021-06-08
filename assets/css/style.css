@@ -1,5 +1,13 @@
 /*common*/
 
+* {
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Gilroy-Regular , sans-serif;
 }
@@ -9,6 +17,7 @@ body {
     width: 100%;
     padding:0 15px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .btn-blue {
@@ -104,7 +113,6 @@ header {
     display: block;
     background: #FFFFFF;
     border: 1px solid #009AFF;
-    box-sizing: border-box;
     border-radius: 4px;
     max-width: 165px;
     padding: 12px 32px;
@@ -193,7 +201,6 @@ nav {
 .analyzes {
     margin-right: 96px;
     font-family: Noto-Sans-regular, sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 140%;
@@ -209,13 +216,11 @@ nav {
     background-repeat: no-repeat;
     padding:  25px 0 60px 0;
     background-size: cover;
-    background-position: 80% 100%;
+    background-position: 100% 100%;
 }
 
 .breadcrumbs {
     font-family: Noto-Sans-regular, sans-serif;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 150%;
     color: #FFFFFF;
@@ -224,24 +229,19 @@ nav {
 
 .banner-title {
     font-family: Gilroy-Semibold, sans-serif;
-    font-style: normal;
-    font-weight: 600;
     font-size: 30px;
     line-height: 140%;
     color: #FFFFFF;
-    margin-bottom: 43px;
+    margin: 0 0 43px 0;
 }
 
-.search {
-    display: flex;
-}
+.search { display: flex; }
 
 .search input {
     padding: 15px 0 15px 48px;
-    width: 458px;
+    width: 100%;
     background: #F8F8F8;
     border: 1px solid #DADADA;
-    box-sizing: border-box;
     border-radius: 4px;
     position: relative;
 }
@@ -249,6 +249,7 @@ nav {
 .search-wrap {
     position: relative;
     margin-right: 5px;
+    flex: 0 1 458px;
 }
 
 .search-wrap::before {
@@ -263,7 +264,6 @@ nav {
     width: 157px;
     padding: 14px 0;
     font-family: Noto-Sans-regular, sans-serif;
-    font-weight: 600;
     cursor: pointer;
 }
 
@@ -278,10 +278,8 @@ nav {
     display: flex;
 }
 
-.sidebar-title , .services-title {
+.sidebar-title , .popular-services_title {
     font-family: Gilroy-Semibold, sans-serif;
-    font-style: normal;
-    font-weight: 600;
     font-size: 24px;
     line-height: 150%;
     color: #333333;
@@ -290,6 +288,12 @@ nav {
 
 .sidebar {
     flex: 0 0 280px;
+    margin-right: 40px;
+}
+
+.services {
+    flex: 0 1 100%;
+    padding-bottom: 55px;
 }
 
 .sidebar-nav {
@@ -299,19 +303,93 @@ nav {
     border-radius: 8px;
     padding-top: 12px;
     padding-bottom: 12px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    height: 630px;
 }
 
-.sidebar-nav li {
-    padding: 18px 0 18px 23px;
+.sidebar-nav li a.active , .sidebar-nav li:hover{
+    background: #F7F8FA;
 }
 
 .sidebar-nav li a {
     font-family: Noto-Sans-regular, sans-serif;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 150%;
     color: #333333;
+    padding: 18px 0 18px 23px;
+    display: block;
 }
+
+.popular-services {
+    margin-bottom: 20px;
+}
+
+.popular-services_content {
+    background: #FFFFFF;
+    border: 1px solid #009AFF;
+    border-radius: 10px;
+    padding: 43px 40px 7px 40px;
+    height: auto;
+    list-style-type: disc;
+    color:  #009AFF;
+    columns: 3 auto;
+}
+
+.popular-services_content li {
+    margin: 0 0 35px 0;
+}
+
+.popular-services_content li a:hover ,
+.services-subsection_content li a:hover {
+    color:  #009AFF;
+}
+
+.popular-services_content li a , .services-subsection_content li a {
+    font-family: Noto-Sans-regular, sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    color: #4F4F4F;
+}
+
+.services-subsection {
+    padding: 30px 0;
+}
+
+.services-subsection_title {
+    font-family: Gilroy-Semibold, sans-serif;
+    font-size: 20px;
+    line-height: 150%;
+    color: #333333;
+    padding-bottom: 23px;
+}
+
+.services-subsection_content {
+    list-style-type: disc;
+    color:  #009AFF;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 40px 7px 17px;
+    max-height: 250px;
+    height: 100%;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.services-subsection_content li   {
+    width: calc(100% / 3 );
+    margin: 0 0 25px 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 
