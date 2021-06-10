@@ -78,6 +78,11 @@
     .nav-items li:not(:last-child) {
         margin-right: 40px;
     }
+
+    .gen-submenu, .uzi-submenu, .nevr-submenu {
+        width: 220px;
+        left: 220px;
+    }
 }
 
 
@@ -162,10 +167,12 @@
         margin: auto auto;
         bottom: 0;
         top: 0;
+        overflow-y: scroll;
+        height: 100vh;
     }
     .nav.responsive  .nav-items {
         flex-direction: column;
-        margin: 0 auto auto auto;
+        margin: 0 auto 100px auto;
         text-align: center;
     }
     .nav.responsive .analyzes {
@@ -213,14 +220,14 @@
         content: url("../image/arrow-submenu.svg");
         position: absolute;
         top: 5px;
-        right: 34px;
+        right: -20px;
     }
 
     .nav.responsive .nav-items li ,
     #genSubmenu li,
     #uziSubmenu li ,
     #nevrSubmenu li {
-        margin: 0 0 33px 0;
+        margin: 0 0 30px 0;
     }
 
     .nav.responsive .nav-items li a {
@@ -237,8 +244,8 @@
     .nav.responsive .btn-call.btn-call-mobile {
         width: 240px;
         padding: 19px 32px;
-        margin-bottom: 0;
         font-size: 16px;
+        margin-bottom: 25px;
     }
 
     .burger_active .burger-line.line-first {
@@ -284,6 +291,7 @@
         position: static;
         background: none;
         box-shadow: none;
+        margin-top: 70px;
     }
 
     .catalog-menu li a, #genSubmenu li a, #uziSubmenu li a, #nevrSubmenu li a{
@@ -299,6 +307,12 @@
         box-shadow: none;
         position: static;
         width: auto;
+    }
+
+    .gen-submenu_link:hover .gen-submenu,
+    .uzi-submenu_link:hover .uzi-submenu,
+    .nevr-submenu_link:hover .nevr-submenu {
+        display: none;
     }
 
 }
@@ -320,6 +334,11 @@
     .phone.phone-mobile {
         margin: 0 10px 0 auto;
     }
+
+    .nav.responsive  .nav-items {
+        margin: 0 auto auto auto;
+    }
+
 }
 
 @media  (max-width: 575.98px) {
@@ -333,13 +352,12 @@
 
     .nav.responsive .nav-items {
         text-align: left;
-        padding: 0 25px;
         width: 90%;
-        margin-top: 15px;
+        margin-top: 70px;
     }
 
     .nav-catalog__title-mobile::after {
-        right: 34px;
+        right: 26px;
     }
 
     .nav.responsive .analyzes {
@@ -370,5 +388,22 @@
     }
     .services-subsection {
         padding: 0;
+    }
+
+    .nav-catalog {
+        width: 100%;
+    }
+
+    .submenu-link:after {
+        right: 40px;
+    }
+
+    .nav-catalog {
+        flex: none;
+        height: auto;
+    }
+
+    .nav.responsive .downmenu-link:after {
+        right: 26px;
     }
 }

@@ -105,6 +105,10 @@ header {
     padding-left: 30px;
 }
 
+.phone a:hover  {
+    color: #009AFF;
+}
+
 .phone::before {
     content: url("../image/phone.svg");
     height: 18px;
@@ -127,6 +131,12 @@ header {
     text-align: center;
     color: #009AFF;
     box-sizing: border-box;
+}
+
+.btn-white.btn-call:hover {
+    background: #009AFF;
+    border-radius: 4px;
+    color: #fff;
 }
 
 /*nav*/
@@ -210,6 +220,10 @@ nav {
     line-height: 28px;
     text-align: center;
     color: #333333;
+}
+
+.nav-items li a:hover {
+    color: #009AFF;
 }
 
 .submenu-link , .downmenu-link{
