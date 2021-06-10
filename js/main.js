@@ -18,8 +18,7 @@
     function isBelowScroll(element) {
         let position = element.getBoundingClientRect();
         console.log(position)
-        return position.top  > 0 ;
-
+        return position.bottom  > 0 ;
     }
 
     function selectLink(id) {
