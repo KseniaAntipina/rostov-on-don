@@ -1,6 +1,6 @@
 @media  (max-width: 1259.98px) {
     .container {
-        width: 1140px;
+        max-width: 1140px;
     }
 
     .services-subsection_content {
@@ -21,20 +21,72 @@
         width: auto;
     }
 
+    .address, .phone, .analyzes , .nav-items{
+        margin-right: auto;
+    }
+
+    .eye {
+        margin-left: 40px;
+    }
+
 }
 
-@media  (max-width: 1199.98px) {
+@media  (max-width: 1152px) {
     .container {
-        width: 960px;
+        max-width: 1090px;
+    }
+
+    .btn-call {
+        display: none;
+    }
+
+    .phone {
+        margin-left: 25px;
+        margin-right: 0;
+    }
+
+    .address {
+        margin-right: 0;
+    }
+
+    .eye {
+        background-image: url("../image/eye.svg");
+        width: 24px;
+        height: 24px;
+        margin: 0 40px 0  0;
+    }
+
+    .analyzes {
+        order: 2;
+        margin-right: 0;
+        margin-left: auto;
     }
 }
+
+@media  (max-width: 1090px) {
+    .container {
+        max-width: 991px;
+    }
+
+    .nav-catalog {
+        flex: 0 1 220px;
+    }
+    .nav-items {
+        margin-left: 25px;
+    }
+
+    .nav-items li:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
 
 @media  (max-width: 991.98px) {
     .container {
         max-width: 720px;
     }
 
-    .sidebar {
+    .sidebar, .nav , .address, .phone {
         display: none;
     }
     .main {
@@ -59,6 +111,196 @@
         -moz-column-gap: 100px;
     }
 
+    .burger.burger-mobile {
+        display: block;
+        margin-right: 0;
+        width: 34px;
+        padding: 10px;
+        height: 19px;
+    }
+
+    .phone.phone-mobile {
+        display: block;
+        height: 23px;
+        margin-right: 49px;
+        width: 20px;
+        padding-left: 0;
+    }
+    .phone.phone-mobile::before {
+        height: 20px;
+        width: 20px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .nav.responsive {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+    }
+
+    .nav.responsive .nav-catalog-wrap,
+    .nav-catalog::after,
+    .mobile-menu {
+        display: none;
+    }
+    .nav.responsive  nav {
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        margin: auto auto;
+        bottom: 0;
+        top: 0;
+    }
+    .nav.responsive  .nav-items {
+        flex-direction: column;
+        margin: 0 auto auto auto;
+        text-align: center;
+    }
+    .nav.responsive .analyzes {
+        margin: 0 auto 35px auto;
+        order: initial;
+        display: block;
+    }
+
+    .nav.responsive .eye {
+        width: auto;
+        padding-left: 30px;
+        background-position: left -2px;
+        margin: 0 0 35px 0;
+        padding-right: 30px;
+        order: initial;
+    }
+
+    .nav.responsive .eye-title {
+        display: inline;
+        font-family: Noto-Sans-regular, sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        color: #B3B6BC;
+    }
+
+    .nav.responsive  .nav-catalog__title-mobile {
+        display: block;
+        text-transform: uppercase;
+        font-family: Noto-Sans-regular, sans-serif;
+        font-size: 20px;
+        color: #4F4F4F;
+        position: relative;
+    }
+
+    .nav-catalog__title-mobile::after {
+        content: url("../image/arrow-submenu.svg");
+        position: absolute;
+        top: -3px;
+        right: -20px;
+    }
+
+    .nav.responsive  .downmenu-link:after {
+        content: url("../image/arrow-submenu.svg");
+        position: absolute;
+        top: 5px;
+        right: 34px;
+    }
+
+    .nav.responsive .nav-items li ,
+    #genSubmenu li,
+    #uziSubmenu li ,
+    #nevrSubmenu li {
+        margin: 0 0 33px 0;
+    }
+
+    .nav.responsive .nav-items li a {
+        font-size: 20px;
+        color: #4F4F4F;
+    }
+
+    .nav.responsive  .address.address-mobile,
+    .nav.responsive .btn-call.btn-call-mobile {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .nav.responsive .btn-call.btn-call-mobile {
+        width: 240px;
+        padding: 19px 32px;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .burger_active .burger-line.line-first {
+        transform: translateY(-50%) rotate(-45deg);
+        position: absolute;
+        border-radius: 3px;
+        transition: 0.4s;
+        width: 29px;
+        top: 40px;
+    }
+
+    .burger_active .burger-line.line-second {display:none;}
+    .burger_active .burger-line.line-third {
+        transform: translateY(-50%) rotate(45deg);
+        position: absolute;
+        border-radius: 3px;
+        transition: 0.4s;
+        width: 29px;
+        top: 40px;
+    }
+    .burger_active {z-index:10000;}
+
+    .catalog-menu_prev {
+        display: block;
+        margin-left: 25px;
+        color: #009AFF;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .catalog-menu_prev span {
+        margin-left: 5px;
+    }
+
+    #infoItems {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    #catalogMenu {
+        position: static;
+        background: none;
+        box-shadow: none;
+    }
+
+    .catalog-menu li a, #genSubmenu li a, #uziSubmenu li a, #nevrSubmenu li a{
+        font: 20px/140% Gilroy-Medium;
+        color: #4F4F4F;
+    }
+
+    .submenu-link:after {
+        right: 0;
+    }
+
+    #genSubmenu, #uziSubmenu, #nevrSubmenu {
+        box-shadow: none;
+        position: static;
+        width: auto;
+    }
+
 }
 
 @media (max-width: 767.98px) {
@@ -70,11 +312,43 @@
         -webkit-column-gap: 25px;
         -moz-column-gap: 25px;
     }
+
+    .logo-desc {
+        display: none;
+    }
+
+    .phone.phone-mobile {
+        margin: 0 10px 0 auto;
+    }
 }
 
 @media  (max-width: 575.98px) {
+
+    .logo { max-width: 72px; }
+
+    .nav.responsive .eye,
+    .nav.responsive .address.address-mobile {
+        display: none;
+    }
+
+    .nav.responsive .nav-items {
+        text-align: left;
+        padding: 0 25px;
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    .nav-catalog__title-mobile::after {
+        right: 34px;
+    }
+
+    .nav.responsive .analyzes {
+        margin-bottom: 25px;
+    }
+
     .container {
-        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
     }
     .search {
         flex-wrap: wrap;

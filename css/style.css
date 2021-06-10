@@ -10,14 +10,14 @@
 
 body {
     font-family: Gilroy-Regular , sans-serif;
+    position: relative;
 }
 
 .container {
-    max-width: 1260px;
-    width: 100%;
+    width: 1290px;
+    box-sizing: border-box;
     padding:0 15px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .btn-blue {
@@ -34,7 +34,7 @@ body {
 
 header {
     padding: 22px 0 30px 0;
-    border-bottom: 1px solid rgba(223, 226, 234);
+    border-bottom: 1px solid rgba(223, 226, 234, 0.4);
 }
 
 .header-info {
@@ -51,7 +51,7 @@ header {
 .logo-desc {
     font-family: Gilroy-Medium , sans-serif;
     font-style: normal;
-    margin-right: 107px;
+    margin-right: auto;
 }
 
 .logo-desc__title {
@@ -60,7 +60,7 @@ header {
     line-height: 26px;
     color: #009AFF;
     padding-bottom: 4px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .logo-desc__subtitle {
@@ -77,6 +77,10 @@ header {
     font-weight: normal;
     color: #333333;
     position: relative;
+}
+
+.phone a {
+    color: #333333;
 }
 
 .address {
@@ -114,7 +118,7 @@ header {
     background: #FFFFFF;
     border: 1px solid #009AFF;
     border-radius: 4px;
-    max-width: 165px;
+    width: 165px;
     padding: 12px 32px;
     font-family: Noto-Sans-regular, sans-serif;
     font-weight: 500;
@@ -122,37 +126,42 @@ header {
     line-height: 16px;
     text-align: center;
     color: #009AFF;
+    box-sizing: border-box;
 }
 
 /*nav*/
 
 nav {
-    padding: 30px 0;
+    height: 80px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .nav {
-    border-bottom: 1px solid rgba(223, 226, 234)
+    border-bottom: 1px solid rgba(223, 226, 234, 0.4)
 }
 
 .nav-catalog {
     display: flex;
     flex: 0 1 255px;
     position: relative;
+    height: 100%;
+    align-items: center;
 }
 
 .nav-catalog::after {
     content: '';
-    border-left: 1px solid rgba(223, 226, 234);
+    border-left: 1px solid rgba(223, 226, 234, 0.4);
     position: absolute;
-    height: 86px;
-    top: -31px;
+    height: 81px;
+    top: 0;
     right: 0;
 }
 
 .burger {
     margin-right: 17px;
+    cursor: pointer;
 }
 
 .burger .burger-line {
@@ -165,6 +174,10 @@ nav {
     margin-bottom: 5px;
 }
 
+.burger .line-second {
+    width: 28px;
+}
+
 .nav-catalog__title {
     font-family: Noto-Sans-regular, sans-serif;
     font-style: normal;
@@ -174,6 +187,7 @@ nav {
     text-transform: uppercase;
     color: #333333;
     margin: 0;
+    cursor: pointer;
 }
 
 
@@ -193,9 +207,90 @@ nav {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 140%;
+    line-height: 28px;
     text-align: center;
     color: #333333;
+}
+
+.submenu-link , .downmenu-link{
+    position: relative;
+}
+
+.downmenu-link:after {
+   content: url("../image/arrow-menu.svg");
+    position: absolute;
+    right: -20px;
+    top: 4px;
+}
+
+.catalog-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    background: #FFFFFF;
+    box-shadow: 0 22px 42px -12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 100;
+}
+
+.submenu {
+    display: none;
+}
+
+.submenu-link {
+    position: relative;
+}
+
+.gen-submenu_link:hover .gen-submenu,
+.uzi-submenu_link:hover .uzi-submenu,
+.nevr-submenu_link:hover .nevr-submenu {
+    display: block;
+}
+
+.gen-submenu_link, .uzi-submenu_link , .nevr-submenu_link {
+    position: relative;
+}
+
+.gen-submenu, .uzi-submenu , .nevr-submenu {
+    position: absolute;
+    width: 257px;
+    left: 255px;
+    top:0;
+    background: #FFFFFF;
+    box-shadow: 0px 22px 42px -12px rgba(0, 0, 0, 0.1);
+}
+
+.submenu-link:after {
+    content: url("../image/arrow-submenu.svg");
+    position: absolute;
+    right: 25px;
+}
+
+.catalog-menu li a {
+    padding: 13px 0 12px 25px;
+    display: block;
+}
+
+.catalog-menu li:hover {
+    background: #F7F8FA;
+}
+
+.catalog-menu li a {
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+    color: #4F4F4F;
+}
+
+.nav-catalog-wrap {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-catalog:hover .catalog-menu {
+    display: block;
 }
 
 .analyzes {
@@ -208,6 +303,30 @@ nav {
     text-decoration-line: underline;
     color: #009AFF;
 }
+
+.eye {
+    background-image: url("../image/glasses.svg");
+    width: 33px;
+    display: block;
+    height: 11px;
+    background-repeat: no-repeat;
+    order: 1;
+}
+
+#infoItems {
+    display: flex;
+}
+
+.eye-title ,
+.nav-catalog__title-mobile ,
+.phone.phone-mobile,
+.burger.burger-mobile,
+.address.address-mobile,
+.btn-call.btn-call-mobile,
+.catalog-menu_prev {
+    display: none;
+}
+
 
 /* section banner */
 
@@ -272,6 +391,7 @@ nav {
 .main {
     background: #F8FBFC;
     padding-top: 70px;
+    position: relative;
 }
 
 .main-content {
@@ -298,7 +418,7 @@ nav {
 
 .sidebar-nav {
     background: #FFFFFF;
-    border: 1px solid #DADADA;
+    border: 1px solid rgba(223, 226, 234, 0.4);
     box-sizing: border-box;
     border-radius: 8px;
     padding-top: 12px;
@@ -309,11 +429,11 @@ nav {
     height: 630px;
 }
 
-.sidebar-nav li a.active , .sidebar-nav li:hover{
+.sidebar-nav a.active , .sidebar-nav a:hover{
     background: #F7F8FA;
 }
 
-.sidebar-nav li a {
+.sidebar-nav a {
     font-family: Noto-Sans-regular, sans-serif;
     font-size: 16px;
     line-height: 150%;
@@ -354,7 +474,7 @@ nav {
 }
 
 .services-subsection {
-    padding: 30px 0;
+    margin: 30px 0;
 }
 
 .services-subsection_title {

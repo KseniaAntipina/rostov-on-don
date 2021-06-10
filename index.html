@@ -9,49 +9,112 @@
     <title>Геномед Ростов-на-Дону</title>
 </head>
 <body>
-<!--    <header>-->
-<!--        <div class="container">-->
-<!--            <div class="header-info">-->
-<!--                <img src="./image/logo.svg" alt="логотип" class="logo">-->
-<!--                <div class="logo-desc">-->
-<!--                    <div class="logo-desc__title">Медико-генетический центр</div>-->
-<!--                    <div class="logo-desc__subtitle">Лаборатория молекулярной патологии Ростова-на-Дону</div>-->
-<!--                </div>-->
-<!--                <div class="address">г. Ростов-на-Дону, ул. Козлова, 65е</div>-->
-<!--                <div class="phone">8 (800) 333-45-38</div>-->
-<!--                <a href="#" class="btn-white">Заказать звонок</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </header>-->
-<!--    <section class="nav">-->
-<!--        <div class="container">-->
-<!--            <nav>-->
-<!--                <div class="nav-catalog">-->
-<!--                    <div class="burger">-->
-<!--                        <div class="burger-line line-first"></div>-->
-<!--                        <div class="burger-line line-second"></div>-->
-<!--                        <div class="burger-line line-third"></div>-->
-<!--                    </div>-->
-<!--                    <p class="nav-catalog__title">Услуги</p>-->
-<!--                </div>-->
-<!--                <ul class="nav-items">-->
-<!--                    <li><a href="#">О центре</a></li>-->
-<!--                    <li><a href="#">Врачи</a></li>-->
-<!--                    <li><a href="#">Отзывы</a></li>-->
-<!--                    <li><a href="#">Акции</a></li>-->
-<!--                    <li><a href="#">Контакты</a></li>-->
-<!--                </ul>-->
-<!--                <a href="#" class="analyzes">Узнать результаты анализа</a>-->
-<!--                <div class="eye">-->
-<!--                    <a href="#">-->
-<!--                        <img src="./image/glasses.svg" alt="Версия для слабовидящих">-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--            </nav>-->
-<!--        </div>-->
-<!--    </section>-->
 
-    <section class="banner">
+   <header>
+        <div class="container">
+            <div class="header-info">
+                <img src="./image/logo.svg" alt="логотип" class="logo">
+                <div class="logo-desc">
+                    <div class="logo-desc__title">Медико-генетический центр</div>
+                    <div class="logo-desc__subtitle">Лаборатория молекулярной патологии Ростова-на-Дону</div>
+                </div>
+                <a href="tel:+88003334538" class="phone phone-mobile">
+                </a>
+                <div class="burger burger-mobile" id="burgerMobile">
+                    <div class="burger-line line-first"></div>
+                    <div class="burger-line line-second"></div>
+                    <div class="burger-line line-third"></div>
+                </div>
+                <div class="address">г. Ростов-на-Дону, ул. Козлова, 65е</div>
+                <div class="phone"><a href="tel:+88003334538">8 (800) 333-45-38</a></div>
+                <a href="#" class="btn-white btn-call">Заказать звонок</a>
+            </div>
+        </div>
+    </header>
+    <section class="nav" id="nav">
+        <div class="container">
+            <nav>
+                <div class="nav-catalog">
+                    <div class="nav-catalog-wrap">
+                        <div class="burger">
+                            <div class="burger-line line-first"></div>
+                            <div class="burger-line line-second"></div>
+                            <div class="burger-line line-third"></div>
+                        </div>
+                        <p class="nav-catalog__title">Каталог</p>
+                    </div>
+
+                    <ul class="catalog-menu" id="catalogMenu">
+                        <li class="catalog-menu_prev" id="submenuPrev">
+                            <img src="./image/arrow-prev.svg" alt="назад">
+                            <span>Назад</span>
+                        </li>
+                        <li class="gen-submenu_link" id="genSubmenuLink">
+                            <a href="#" class="submenu-link">Генетика</a>
+                            <ul class="gen-submenu submenu" id="genSubmenu">
+                                <li class="catalog-menu_prev" id="toPrevFromGen">
+                                    <img src="./image/arrow-prev.svg" alt="назад">
+                                    <span>Назад</span>
+                                </li>
+                                <li><a href="#">Консультация врача-генетика</a></li>
+                                <li><a href="#">Доставка биоматериала</a></li>
+                                <li><a href="#">Анализы ДНК</a></li>
+                            </ul>
+                        </li>
+                        <li class="uzi-submenu_link" id="uziSubmenuLink">
+                            <a href="#" class="submenu-link">УЗИ</a>
+                            <ul class="uzi-submenu submenu" id="uziSubmenu">
+                                <li class="catalog-menu_prev" id="toPrevFromUzi">
+                                    <img src="./image/arrow-prev.svg" alt="назад">
+                                    <span>Назад</span>
+                                </li>
+                                <li><a href="#">Консультация врача-генетика</a></li>
+                                <li><a href="#">Доставка биоматериала</a></li>
+                                <li><a href="#">Анализы ДНК</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Видео-ЭЭГ мониторинг</a></li>
+                        <li><a href="#">Инвазивная диагностика</a></li>
+                        <li class="nevr-submenu_link" id="nevrSubmenuLink">
+                            <a href="#" class="submenu-link">Неврология</a>
+                            <ul class="nevr-submenu submenu" id="nevrSubmenu">
+                                <li class="catalog-menu_prev" id="toPrevFromNevr">
+                                    <img src="./image/arrow-prev.svg" alt="назад">
+                                    <span>Назад</span>
+                                </li>
+                                <li><a href="#">Консультация врача-генетика</a></li>
+                                <li><a href="#">Доставка биоматериала</a></li>
+                                <li><a href="#">Анализы ДНК</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Эпилептология</a></li>
+                        <li><a href="#">Акушерство и гинекология</a></li>
+                        <li><a href="#">Эндокринология</a></li>
+                        <li><a href="#">Аллергология и иммунология</a></li>
+                        <li><a href="#">Консилиумы</a></li>
+                    </ul>
+                </div>
+                <ul class="nav-items" id="navItems">
+                    <li class="nav-catalog__title-mobile" id="openCatalog">Каталог</li>
+                    <li class="downmenu-link"><a href="#" >О центре</a></li>
+                    <li><a href="#">Врачи</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+
+                <div id="infoItems">
+                    <a class="eye" href="#"><span class="eye-title">Версия для слабовидящих</span></a>
+                    <a href="#" class="analyzes">Узнать результаты анализа</a>
+                    <div class="address address-mobile">г. Ростов-на-Дону, ул. Козлова, 65е</div>
+                    <a href="#" class="btn-white btn-call btn-call-mobile">Заказать звонок</a>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+ <!--  <section class="banner">
         <div class="container">
             <div class="breadcrumbs">
                 <span>Главная</span>
@@ -69,12 +132,12 @@
             </div>
         </div>
     </section>
-    <section class="main">
+   <section class="main">
         <div class="container">
             <div class="main-content">
-                <div class="sidebar">
+                <div class="sidebar" >
                     <div class="sidebar-title">Разделы</div>
-                        <ul class="sidebar-nav">
+                        <ul class="sidebar-nav" id="sidebarnav">
                             <li><a href="#genetics">Генетика</a></li>
                             <li><a href="#uzi">УЗИ</a></li>
                             <li><a href="#video-eeg">Видео-ЭЭГ мониторинг</a></li>
@@ -241,6 +304,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
+
+
+<script src="./js/main.js"></script>
 </body>
 </html>
