@@ -1,4 +1,7 @@
 @media  (max-width: 1259.98px) {
+
+    /*page service all*/
+
     .container {
         max-width: 1140px;
     }
@@ -27,6 +30,43 @@
 
     .eye {
         margin-left: 40px;
+    }
+
+    /*page service one*/
+
+    .genetics-doctors-wrap {
+        position: relative;
+        padding: 0 30px;
+    }
+
+    .custom-prev {
+        display: block;
+        background: url("../image/slider-arrow.svg") no-repeat;
+        z-index: 1000;
+        width: 15px;
+        height: 24px;
+        position: absolute;
+        top: 39%;
+        transform: rotate(180deg);
+        left: 0;
+    }
+
+    .custom-next {
+        display: block;
+        background: url("../image/slider-arrow.svg") no-repeat;
+        z-index: 1000;
+        width: 15px;
+        height: 24px;
+        position: absolute;
+        top: 39%;
+        right: 0;
+    }
+
+    .services-item1 {
+        margin-right: 20px;
+    }
+    .doctors-services-item {
+        flex: 0 1 50%;
     }
 
 }
@@ -83,6 +123,10 @@
         width: 220px;
         left: 220px;
     }
+
+    .additional-services-items {columns: 1;}
+    .additional-services-items li {height: auto}
+
 }
 
 
@@ -315,6 +359,22 @@
         display: none;
     }
 
+    /*page one service*/
+
+    .genetics-price-item {
+        align-items: flex-start;
+    }
+
+    .service-title {font-size: 16px;}
+    .service-btn {padding: 14px 25px}
+    .service-price { flex: 0 0 205px;}
+    .service-price-currency {margin-right: auto;}
+
+    .doctors-services {flex-wrap: wrap}
+    .doctors-services-item {flex: 0 1 100%; background-size: 100% }
+    .services-item1 {margin: 0 0 20px 0}
+
+
 }
 
 @media (max-width: 767.98px) {
@@ -339,6 +399,20 @@
         margin: 0 auto auto auto;
     }
 
+    /*page one service*/
+
+    .service-title {flex: 0 1 350px;margin-bottom: 10px;}
+    .genetics-price-item {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .doctors-services-item {
+        height: auto;
+        padding: 20px 0 20px 40px;
+    }
+    .services-item-btn {padding: 10px 65px}
+    .about-service {padding: 50px 0 20px 0;}
+
 }
 
 @media  (max-width: 575.98px) {
@@ -356,28 +430,17 @@
         margin-top: 70px;
     }
 
-    .nav-catalog__title-mobile::after {
-        right: 26px;
-    }
+    .nav-catalog__title-mobile::after {right: 26px;}
 
     .nav.responsive .analyzes {
         margin-bottom: 25px;
     }
 
-    .container {
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .search {
-        flex-wrap: wrap;
-    }
-    .search input {
-        margin-bottom: 10px;
-    }
+    .container { width: 100%; box-sizing: border-box;}
+    .search {flex-wrap: wrap;}
+    .search input {margin-bottom: 10px;}
 
-    .banner {
-        background-position: center;
-    }
+    .banner {background-position: center;}
 
     .popular-services_content,
     .services-subsection_content {
@@ -386,24 +449,37 @@
     .popular-services_content {
         padding: 20px 0px 20px 30px;
     }
-    .services-subsection {
-        padding: 0;
-    }
+    .services-subsection {padding: 0;}
 
-    .nav-catalog {
-        width: 100%;
-    }
+    .nav-catalog {width: 100%;}
 
-    .submenu-link:after {
-        right: 40px;
-    }
+    .submenu-link:after {right: 40px;}
+    .nav-catalog {flex: none;height: auto;}
+    .nav.responsive .downmenu-link:after {right: 26px;}
 
-    .nav-catalog {
-        flex: none;
-        height: auto;
-    }
+    /*page service one*/
 
-    .nav.responsive .downmenu-link:after {
-        right: 26px;
-    }
+    .banner-genetics {padding-top: 20px;background-position: center left;}
+    .banner-genetics .breadcrumbs, .section-title {margin-bottom: 20px;}
+    .banner-desc {font-size: 14px;}
+    .about-service {padding-top: 30px;}
+
+    .service-price {margin-bottom: 10px;}
+    .genetics-price-item:not(:last-child) {margin-bottom: 25px;}
+
+    .doctors-services-item {background-size: auto}
+    main.genetics {padding-bottom: 60px;}
+
+}
+
+@media  (max-width: 460px) {
+    .genetics-price-item {justify-content: start;}
+    .service-btn {width: 100%;text-align: center;}
+}
+
+@media  (max-width: 400px) {
+    .genetics-doctors-item:not(:last-child) {margin-right: 0px;}
+    .doctors-item-btn {padding: 15px 35px;}
+    .genetics-doctors {padding-top: 40px;}
+    .genetics-doctors-content { margin-bottom: 30px;}
 }

@@ -126,6 +126,41 @@ closeNevrSubmenu.onclick = () =>  {
 }
 });
 
+$(document).ready(function(){
+    $('#genetics-doctors-slider').slick({
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.custom-prev'),
+        nextArrow: $('.custom-next'),
+        responsive: [
+            {
+                breakpoint: 10000,
+                settings: 'unslick'
+            },
+            {
+                breakpoint: 1260,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+});
 
 
 
