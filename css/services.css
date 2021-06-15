@@ -1,6 +1,6 @@
 /*common*/
 
-* {
+*:not(.slick-slider, .slick-list, .slick-track) {
     -ms-transition: all 0.4s;
     -o-transition: all 0.4s;
     -webkit-transition: all 0.4s;
@@ -437,7 +437,7 @@ nav {
     border-radius: 8px;
     padding-top: 12px;
     padding-bottom: 12px;
-    position: -webkit-sticky; /* Safari */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     height: 630px;

@@ -1,3 +1,66 @@
+$(document).ready(function(){
+
+    $('#mainSlider').slick({
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.white-arrow-prev'),
+        nextArrow: $('.white-arrow-next'),
+    });
+
+    $('#consultations-slider').slick({
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.consult-slide-arrow-prev'),
+        nextArrow: $('.consult-slide-arrow-next'),
+    });
+
+    $('#reviews-slider').slick({
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('.reviews-arrow-prev'),
+        nextArrow: $('.reviews-arrow-next'),
+    });
+
+    $('#genetics-doctors-slider').slick({
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.custom-prev'),
+        nextArrow: $('.custom-next'),
+        responsive: [
+            {
+                breakpoint: 10000,
+                settings: 'unslick'
+            },
+            {
+                breakpoint: 1260,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+});
+
+/*
 (function() {
     'use strict';
 
@@ -17,7 +80,7 @@
 
     function isBelowScroll(element) {
         let position = element.getBoundingClientRect();
-        console.log(position)
+
         return position.bottom  > 0 ;
     }
 
@@ -32,6 +95,7 @@
 
     window.addEventListener('scroll', function(event) {
         getClosestSection();
+
     });
 
 
@@ -125,42 +189,9 @@ closeNevrSubmenu.onclick = () =>  {
 
 }
 });
+*/
 
-$(document).ready(function(){
-    $('#genetics-doctors-slider').slick({
-        dots: false,
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: $('.custom-prev'),
-        nextArrow: $('.custom-next'),
-        responsive: [
-            {
-                breakpoint: 10000,
-                settings: 'unslick'
-            },
-            {
-                breakpoint: 1260,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    });
-});
+
 
 
 
