@@ -14,6 +14,20 @@ $(document).ready(function(){
         slidesToScroll: 1,
         prevArrow: $('.consult-slide-arrow-prev'),
         nextArrow: $('.consult-slide-arrow-next'),
+        responsive: [
+            {
+                breakpoint: 1090,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
     $('#reviews-slider').slick({
@@ -22,9 +36,23 @@ $(document).ready(function(){
         slidesToScroll: 1,
         prevArrow: $('.reviews-arrow-prev'),
         nextArrow: $('.reviews-arrow-next'),
+        responsive: [
+            {
+                breakpoint: 1090,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
-    $('#genetics-doctors-slider').slick({
+    $('#genetics-doctors-slider, #doctors-slider').slick({
         dots: false,
         arrows: true,
         slidesToShow: 1,

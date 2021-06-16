@@ -2,6 +2,10 @@ main {
     background: #F8FBFC;
 }
 
+.main-page {
+    padding-top: 50px;
+}
+
 main.main-page section:not(:last-child) {
     margin-bottom: 70px;
 }
@@ -100,7 +104,6 @@ main.main-page section:not(:last-child) {
 /* consultations slider */
 
 .advertising-banners {
-    margin-top: 50px;
     margin-bottom: 70px;
 }
 
@@ -160,6 +163,10 @@ main.main-page section:not(:last-child) {
     font-size: 14px;
 }
 
+.advertising-banners .consult-slide-btn:hover {
+    background: #047FCF;
+}
+
 .consult-slide-arrow-prev {
     left: 20px;
 }
@@ -174,7 +181,7 @@ main.main-page section:not(:last-child) {
     border: 1px solid #DADADA;
     box-sizing: border-box;
     border-radius: 10px;
-    padding: 35px 0 25px 40px;
+    padding: 35px 40px 25px 40px;
 }
 
 .services-main-content {
@@ -242,6 +249,7 @@ main.main-page section:not(:last-child) {
     box-sizing: border-box;
     width: 370px;
     margin: 0 15px;
+    display: block;
 }
 
 .reviews-item-img img {
