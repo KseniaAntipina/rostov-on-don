@@ -60,7 +60,7 @@ $(document).ready(function(){
 
 });
 
-/*
+
 (function() {
     'use strict';
 
@@ -189,7 +189,7 @@ closeNevrSubmenu.onclick = () =>  {
 
 }
 });
-*/
+
 
 
 

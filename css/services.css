@@ -255,13 +255,11 @@ nav {
     position: relative;
 }
 
-.gen-submenu_link:hover .gen-submenu,
-.uzi-submenu_link:hover .uzi-submenu,
-.nevr-submenu_link:hover .nevr-submenu {
+.dropdown-menu:hover>ul {
     display: block;
 }
 
-.gen-submenu_link, .uzi-submenu_link , .nevr-submenu_link {
+.dropdown-menu {
     position: relative;
 }
 

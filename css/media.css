@@ -1,3 +1,10 @@
+@media  (max-width: 1500px) {
+    .white-arrow-next {right: 3%}
+    .white-arrow-prev {left: 3%}
+}
+
+
+
 @media  (max-width: 1259.98px) {
 
     /*page service all*/
@@ -69,6 +76,10 @@
         flex: 0 1 50%;
     }
 
+    .additional-services-items {
+        grid-template-columns: repeat(2, 50% );
+    }
+
 }
 
 @media  (max-width: 1152px) {
@@ -101,6 +112,8 @@
         margin-right: 0;
         margin-left: auto;
     }
+
+    .main-slider-item {padding-top: 80px;}
 }
 
 @media  (max-width: 1090px) {
@@ -123,9 +136,6 @@
         width: 220px;
         left: 220px;
     }
-
-    .additional-services-items {columns: 1;}
-    .additional-services-items li {height: auto}
 
 }
 
@@ -268,9 +278,9 @@
     }
 
     .nav.responsive .nav-items li ,
-    #genSubmenu li,
-    #uziSubmenu li ,
-    #nevrSubmenu li {
+    .submenu li,
+    .submenu li ,
+    .submenu li {
         margin: 0 0 30px 0;
     }
 
@@ -331,14 +341,14 @@
         align-items: center;
     }
 
-    #catalogMenu {
+    .catalog-menu {
         position: static;
         background: none;
         box-shadow: none;
         margin-top: 70px;
     }
 
-    .catalog-menu li a, #genSubmenu li a, #uziSubmenu li a, #nevrSubmenu li a{
+    .catalog-menu li a, .submenu li a{
         font: 20px/140% Gilroy-Medium;
         color: #4F4F4F;
     }
@@ -347,15 +357,13 @@
         right: 0;
     }
 
-    #genSubmenu, #uziSubmenu, #nevrSubmenu {
+    .submenu {
         box-shadow: none;
         position: static;
         width: auto;
     }
 
-    .gen-submenu_link:hover .gen-submenu,
-    .uzi-submenu_link:hover .uzi-submenu,
-    .nevr-submenu_link:hover .nevr-submenu {
+    .dropdown-menu:hover>ul {
         display: none;
     }
 
@@ -374,30 +382,25 @@
     .doctors-services-item {flex: 0 1 100%; background-size: 100% }
     .services-item1 {margin: 0 0 20px 0}
 
+    .additional-services-items {grid-template-columns: none;}
+    .additional-services-items li {min-height: auto}
 
+
+    .slider-text-wrap { padding-left: 40px;}
+    .white-arrow-prev, .white-arrow-next {top: 41%}
 }
 
 @media (max-width: 767.98px) {
-    .container {
-        max-width: 540px;
-    }
+    .container { max-width: 540px; }
     .services-subsection_content {
         column-gap: 25px;
         -webkit-column-gap: 25px;
         -moz-column-gap: 25px;
     }
 
-    .logo-desc {
-        display: none;
-    }
-
-    .phone.phone-mobile {
-        margin: 0 10px 0 auto;
-    }
-
-    .nav.responsive  .nav-items {
-        margin: 0 auto auto auto;
-    }
+    .logo-desc {display: none;}
+    .phone.phone-mobile {margin: 0 10px 0 auto;}
+    .nav.responsive  .nav-items {margin: 0 auto auto auto;}
 
     /*page one service*/
 
@@ -412,6 +415,15 @@
     }
     .services-item-btn {padding: 10px 65px}
     .about-service {padding: 50px 0 20px 0;}
+
+    /*main slider*/
+
+    .main-slider-item {height: 270px; padding-top: 30px;}
+    .main-slider-item_title {font-size: 30px;line-height: 120%;}
+    .main-slider-item_desc {margin-bottom: 20px;}
+    .main-slider-item_desc {font-size: 14px;}
+    .white-arrow-prev, .white-arrow-next {top: 47%}
+    .main-slider .main-slider-item_btn {padding: 11px 50px}
 
 }
 
@@ -470,6 +482,15 @@
     .doctors-services-item {background-size: auto}
     main.genetics {padding-bottom: 60px;}
 
+    .slider-text-wrap { padding-left: 50px;}
+    .main-slider-item {height: 250px;padding-top: 40px;}
+    .main-slider-item_title {font-size: 24px;line-height: 110%;}
+    .main-slider-item_desc {max-width: 90%;  font-size: 12px;}
+    .main-slider .main-slider-item_btn {
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+
 }
 
 @media  (max-width: 460px) {
@@ -482,4 +503,7 @@
     .doctors-item-btn {padding: 15px 35px;}
     .genetics-doctors {padding-top: 40px;}
     .genetics-doctors-content { margin-bottom: 30px;}
+
+    .slider-text-wrap { padding-left: 40px;}
+    .main-slider-item {padding-top: 30px;}
 }

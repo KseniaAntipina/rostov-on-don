@@ -3,7 +3,7 @@ main {
 }
 
 main.main-page section:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
 .title-in-main {
@@ -53,7 +53,7 @@ main.main-page section:not(:last-child) {
     height: 24px;
     background-image: url("../image/arrow-slider-white.svg");
     background-repeat: no-repeat;
-    z-index: 1000;
+    z-index: 100;
     cursor: pointer;
     top: 47%;
 }
@@ -161,11 +161,11 @@ main.main-page section:not(:last-child) {
 }
 
 .consult-slide-arrow-prev {
-    left: 25px;
+    left: 20px;
 }
 
 .consult-slide-arrow-next {
-    right: 25px;
+    right: 20px;
     transform: rotate(180deg);
 }
 
