@@ -86,8 +86,115 @@ $(document).ready(function(){
         ]
     });
 
+    $('#all-doctors-slider, #gynecologists-slider').slick({
+
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<div class="doctors-slider-prev"></div>',
+        nextArrow: '<div class="doctors-slider-next"></div>',
+        responsive: [
+            {
+                breakpoint: 10000,
+                settings: 'unslick'
+            },
+            {
+                breakpoint: 1260,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
 });
 
+/*кастомный select и показ блоков*/
+
+$('.selectDoctors').each(function (index, element) {
+    const _this = $(this),
+        selectOption = _this.find('option'),
+        selectOptionLength = selectOption.length,
+        selectedOption = selectOption.filter(':selected'),
+        duration = 200; // длительность анимации
+    _this.hide();
+    _this.wrap('<div class="select"></div>');
+    $('<div>', {
+        class: 'new-select',
+       text: _this.children('option:disabled').text()
+    }).insertAfter(_this);
+
+    const selectHead = _this.next('.new-select');
+    $('<div>', {
+        class: 'new-select__list'
+    }).insertAfter(selectHead);
+
+    const selectList = selectHead.next('.new-select__list');
+    for (let i = 1; i < selectOptionLength; i++) {
+        $('<div>', {
+            class: 'new-select__item',
+            html: $('<span>', {
+                text: selectOption.eq(i).text()
+            })
+        })
+            .attr('data-value', selectOption.eq(i).val())
+            .appendTo(selectList);
+    }
+    const selectItem = selectList.find('.new-select__item');
+    selectList.slideUp(0);
+    selectHead.on('click', function () {
+        if (!$(this).hasClass('on')) {
+            $(this).addClass('on');
+            selectList.slideDown(duration);
+
+            selectItem.on('click', function () {
+                var chooseItem = $(this).data('value');
+                $('select').val(chooseItem).attr('selected', 'selected');
+                selectHead.text($(this).find('span').text());
+                selectList.slideUp(duration);
+                selectHead.removeClass('on');
+
+                /*код отвечающий за показ слайдера */
+                if ($(element).hasClass('selectDoctors')) {
+                    let slidersProduct = document.querySelectorAll('.doctors-slider')
+                    for (let i = 0; i < slidersProduct.length; i++) {
+                        if (slidersProduct[i].classList.contains(chooseItem)) {
+                            slidersProduct[i].classList.add('show');
+                            slidersProduct[i].classList.remove('hide');
+                            /*след  строки нужны для того чтобы слик слайдер не съезжал при смене блоков. Новые слайдеры добавлять сюда.*/
+                            $('#all-doctors-slider').slick('setPosition');
+                            $('#gynecologists-slider').slick('setPosition');
+                        }
+                        else {
+                            slidersProduct[i].classList.remove('show');
+                            slidersProduct[i].classList.add('hide');
+                        }
+                    }
+                    /*конец*/
+                }
+
+            });
+
+        } else {
+            $(this).removeClass('on');
+            selectList.slideUp(duration);
+        }
+    });
+
+});
+
+/*скрипт скролла на странице всех услуг*/
 
 (function() {
     'use strict';
@@ -129,6 +236,7 @@ $(document).ready(function(){
 
 })();
 
+/*скрипт бургера и моб меню*/
 
 let burger = document.getElementById('burgerMobile');
 
@@ -143,6 +251,8 @@ burger.onclick = function myFunction() {
         burger.classList.toggle('burger_active');
     }
 };
+
+/*скрипт мобильного меню*/
 
 window.addEventListener('resize', function(event){
 

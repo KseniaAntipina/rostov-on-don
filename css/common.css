@@ -1,0 +1,99 @@
+/*общие, повторяющиеся стили*/
+
+*:not(.slick-slider, .slick-list, .slick-track, .new-select__list) {
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Gilroy-Regular , sans-serif;
+    position: relative;
+}
+
+.container {
+    width: 1290px;
+    box-sizing: border-box;
+    padding:0 15px;
+    margin: 0 auto;
+}
+
+.btn-blue {
+    display: block;
+    background: #009AFF;
+    border-radius: 4px;
+    color: #FCFCFC;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* карточки врачей на страницах: главная, консультация , все врачи */
+
+.doctors-item {
+    background: #FFFFFF;
+    padding: 30px 35px;
+    font-family: Noto-Sans-regular, sans-serif;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    width: 300px;
+}
+
+.doctors-item:hover {
+    background: rgba(0, 154, 255, 0.05);
+    border: 1px solid rgba(0, 154, 255, 0.2);
+}
+
+.doctors-item-image img {
+    margin: 0 auto 40px auto;
+    width: 125px;
+    border-radius: 50%;
+    display: block;
+}
+
+.doctors-item-name {
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    max-width: 210px;
+    margin: 0 auto 20px auto;
+    height: 52px;
+}
+
+.doctors-item-name a {
+    color: #333;
+}
+
+.doctors-item-name a:hover {
+    color: #009AFF;
+}
+
+.doctors-item-prof {
+    font-size: 14px;
+    line-height: 150%;
+    color: rgba(51, 51, 51, 0.7);
+    text-align: center;
+    margin:0 auto 30px auto;
+    max-width: 182px;
+    height: 42px;
+}
+
+.doctors-item-btn {
+    padding: 15px 0px;
+    text-align: center;
+    background: #009AFF;
+    border-radius: 4px;
+    color: #FCFCFC;
+    display: block;
+    font-size: 14px;
+}
+
+.doctors-item-btn:hover {
+    background: #047FCF;
+}
+
+
+
+

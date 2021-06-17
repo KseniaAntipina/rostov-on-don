@@ -222,6 +222,16 @@ main.main-page section:not(:last-child) {
     color: #047FCF;
 }
 
+.main-doctors-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.doctors-item-main:not(:last-child) {
+    margin-right: 20px;
+}
+
 .about-center-content {
     columns: 2 auto;
 }
