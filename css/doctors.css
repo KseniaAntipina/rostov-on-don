@@ -105,7 +105,8 @@ main.page-doctors {
 
 /*select end*/
 
-
+.show {display: flex;}
+.hide {display: none;}
 
 
 .doctors-slider-prev , .doctors-slider-next {
