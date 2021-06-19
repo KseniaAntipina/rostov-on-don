@@ -125,6 +125,10 @@
 
     .main-slider-item {padding-top: 80px;}
 
+    .doctor-content {flex-wrap: wrap}
+    .doctor-content-right {flex: 0 0 100%}
+    .doctor-image {flex: 0 0 100%;margin: 0 0 30px 0;text-align: center}
+
 }
 
 @media  (max-width: 1090px) {
@@ -413,6 +417,7 @@
     .reviews-item-img img {margin: 0 auto 15px auto;}
     .reviews-item-name, .reviews-item-date {text-align: center}
 
+    main.page-one-doctors {padding: 50px 0 70px 0;}
 
 }
 
@@ -466,6 +471,8 @@
         margin: 0 auto;
     }
 
+    .doctor-image img {max-width: 200px;}
+    .banner-doctors {background-position: 70% center;}
 }
 
 @media  (max-width: 575.98px) {
@@ -583,5 +590,5 @@
     .all-doctors-item:not(:nth-child(4n)) {margin: 0 7px;padding: 20px}
     .doctors-slider-next {right: -15px;}
     .doctors-slider-prev {left: -15px;}
-
+    main.page-one-doctors {padding: 30px 0 50px 0;}
 }

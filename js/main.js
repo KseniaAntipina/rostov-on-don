@@ -192,6 +192,19 @@ $('.selectDoctors').each(function (index, element) {
         }
     });
 
+    /*закрывает селект при клике вне блока*/
+    document.addEventListener('click', (event) => {
+        const withinBoundaries = event.composedPath().includes(document.querySelector('.new-select'))
+        const selectList = selectHead.next('.new-select__list');
+
+        if (!withinBoundaries) {
+            $(document.querySelector('.new-select')).removeClass('on');
+            selectList.slideUp(duration);
+        }
+    })
+
+
+
 });
 
 /*скрипт скролла на странице всех услуг*/
@@ -211,6 +224,7 @@ $('.selectDoctors').each(function (index, element) {
         }
 
         selectLink(sections.item(index).id)
+
     }
 
     function isBelowScroll(element) {

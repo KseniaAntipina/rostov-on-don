@@ -109,13 +109,21 @@ main.main-page section:not(:last-child) {
 
 .consultation-slide {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: center center;
     width: 400px;
     height: 210px;
     padding-top: 57px;
     box-sizing: border-box;
     margin: 0 15px;
     text-align: center;
+    transition: background-size .3s ease-in;
+    -moz-transition: background-size .3s ease-in;
+    -web-kit-transition: background-size .3s ease-in;
+}
+
+.consultation-slide:hover   {
+    background-size: 115% 115%;
 }
 
 .consult-slide1 {
