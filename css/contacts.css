@@ -1,0 +1,71 @@
+.banner-doctors.banner-contacts {
+    background-image: url("../image/banner-contacts.png");
+}
+
+.banner-doctors.banner-contacts   .breadcrumbs {
+    color: #fff;
+}
+
+.banner-doctors.banner-contacts  .banner-title {
+    color: #fff;
+}
+
+main.contacts {
+    padding: 50px 0 100px 0;
+}
+
+.contacts-title {
+    font: normal 36px/140% 'Noto-Sans-regular';
+    color: #2D9CDB;
+    text-align: center;
+    max-width: 1230px;
+    margin-bottom: 44px;
+}
+
+.attention-text {
+    background: #FFFFFF;
+    box-shadow: 19px 0px 48px rgba(0, 0, 0, 0.05);
+    display: flex;
+    padding: 34px 45px 34px 64px;
+    margin-bottom: 50px;
+}
+
+.attention-text-title {
+    font: normal 24px/150% 'Noto-Sans-bold';
+    color: #FF0000;
+    flex: 1 0 220px;
+}
+
+.attention-text-subtitle {
+    font: normal 18px/140% 'Noto-Sans-regular';
+    color: #333333;
+}
+
+.contacts-content {
+    display: flex;
+}
+
+.contacts-content .map img {
+    max-width: 100%;
+}
+
+.operating-mode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 19px 0px 48px rgba(0, 0, 0, 0.04);
+    padding: 0 50px;
+    flex: 0 0 282px;
+    box-sizing: border-box;
+}
+
+.operating-mode-title {
+    font: normal 16px/140% 'Noto-Sans-bold';
+    color: #333333;
+}
+
+.operating-mode-content {
+    color: rgba(51, 51, 51, 0.7);
+}
+

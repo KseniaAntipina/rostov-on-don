@@ -268,6 +268,8 @@ burger.onclick = function myFunction() {
 
 /*скрипт мобильного меню*/
 
+
+
 window.addEventListener('resize', function(event){
 
 const mediaQuery = window.matchMedia('(max-width: 992px)')
@@ -277,22 +279,24 @@ let nav = document.querySelector('nav')
 
 let openSubmenuCatalog = document.getElementById('openCatalog');
 let closeSubmenuCatalog = document.getElementById('submenuPrev');
-
 let navItems = document.getElementById('navItems');
 let catalogMenu = document.getElementById('catalogMenu');
-let genSubmenu = document.getElementById('genSubmenu');
-let uziSubmenu = document.getElementById('uziSubmenu');
-let nevrSubmenu = document.getElementById('nevrSubmenu');
 let mobileInfoHide = document.getElementById('infoItems');
 let navCatalog = document.getElementById('navCatalog');
-
-let openGenSubmenu = document.getElementById('genSubmenuLink')
-let openUziSubmenu = document.getElementById('uziSubmenuLink')
-let openNevrSubmenu = document.getElementById('nevrSubmenuLink')
-
 let closeGenSubmenu = document.getElementById('toPrevFromGen')
 let closeUziSubmenu = document.getElementById('toPrevFromUzi')
 let closeNevrSubmenu = document.getElementById('toPrevFromNevr')
+
+
+/*let openGenSubmenu = document.getElementById('genSubmenuLink')
+let openUziSubmenu = document.getElementById('uziSubmenuLink')
+let openNevrSubmenu = document.getElementById('nevrSubmenuLink')*/
+
+/*let genSubmenu = document.getElementById('genSubmenu');
+let uziSubmenu = document.getElementById('uziSubmenu');
+let nevrSubmenu = document.getElementById('nevrSubmenu');*/
+
+
 
 openSubmenuCatalog.onclick = () => {
     navItems.style.display = "none";
@@ -306,15 +310,71 @@ closeSubmenuCatalog.onclick = () =>  {
     mobileInfoHide.style.display = "block";
 };
 
-openGenSubmenu.onclick = () => {
+
+/*(function($){
+    $(document).ready(function(){
+        $('.dropdown-menu').on('click', function() {
+
+            navCatalog.style.display = "none"
+            nav.append($(this).children('ul'))
+            $(this).children('ul').addClass('open');
+
+        });
+    });
+})(jQuery);*/
+
+/*let linksSubmenuAll = document.querySelectorAll('.dropdown-menu')
+
+    for (let i = 0; i < linksSubmenuAll.length; i++) {
+        linksSubmenuAll[i].onclick = () => {
+
+            navCatalog.style.display = "none";
+            linksSubmenuAll[i].childNodes[3].classList.add("open")
+            nav.append(linksSubmenuAll[i].childNodes[3]);
+
+        }*/
+
+(function() {
+    // get all elements with class 'more'
+    let expandableElem = document.querySelectorAll('.dropdown-menu');
+
+    // loop through each expandable element, adding click listener
+    expandableElem.forEach(li => {
+        li.addEventListener(
+            'click',
+            function() {
+                console.log(this)
+                navCatalog.style.display = "none";
+                nav.append(this);
+                this.classList.toggle('open')
+            },
+            false
+        )
+    });
+})();
+
+       /* linksSubmenuAll[i].childNodes[3].onclick = () =>  {
+            linksSubmenuAll[i].childNodes[3].classList.remove("open")
+            navCatalog.style.display = "block";
+        };
+
+    }
+
+
+   /* navCatalog.style.display = "none";
+    $($(this)[0].children[1]).addClass('open');
+    nav.append($(this)[0].children[1])
+*/
+
+
+
+
+
+
+/*openGenSubmenu.onclick = () => {
     navCatalog.style.display = "none";
     nav.append(genSubmenu);
     genSubmenu.style.display= "block";
-};
-
-closeGenSubmenu.onclick = () =>  {
-    genSubmenu.style.display= "none";
-    navCatalog.style.display = "block";
 };
 
 openUziSubmenu.onclick = () => {
@@ -323,21 +383,27 @@ openUziSubmenu.onclick = () => {
     uziSubmenu.style.display= "block";
 };
 
-closeUziSubmenu.onclick = () =>  {
-    uziSubmenu.style.display= "none";
-    navCatalog.style.display = "block";
-};
-
 openNevrSubmenu.onclick = () => {
     navCatalog.style.display = "none";
     nav.append(nevrSubmenu);
     nevrSubmenu.style.display= "block";
+};*/
+
+closeGenSubmenu.onclick = () =>  {
+    genSubmenu.style.display= "none";
+    navCatalog.style.display = "block";
+};
+
+closeUziSubmenu.onclick = () =>  {
+    uziSubmenu.style.display= "none";
+    navCatalog.style.display = "block";
 };
 
 closeNevrSubmenu.onclick = () =>  {
     nevrSubmenu.style.display= "none";
     navCatalog.style.display = "block";
 };
+
 
 }
 });

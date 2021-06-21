@@ -85,6 +85,13 @@
     .show {display: block;}
     .hide {display: none;}
 
+    .dropdown-menu:hover>ul {
+        display: none;
+    }
+
+    .dropdown-menu .submenu {display:none}
+    .dropdown-menu.open .submenu { display: block;}
+
 
     .all-doctors-item,
     .all-doctors-item:not(:nth-child(4n)),
@@ -385,9 +392,7 @@
         width: auto;
     }
 
-    .dropdown-menu:hover>ul {
-        display: none;
-    }
+
 
     /*page one service*/
 
@@ -418,6 +423,15 @@
     .reviews-item-name, .reviews-item-date {text-align: center}
 
     main.page-one-doctors {padding: 50px 0 70px 0;}
+
+    .no-vacancies {height: 60vh;}
+
+    .attention-text {flex-wrap: wrap; text-align: center;}
+
+
+    .attention-text-title {margin-bottom: 10px;}
+    .contacts-content {flex-wrap: wrap;}
+    .operating-mode { padding: 20px 50px; flex: 0 0 100%;}
 
 }
 
@@ -473,6 +487,10 @@
 
     .doctor-image img {max-width: 200px;}
     .banner-doctors {background-position: 70% center;}
+
+
+    .contacts-title  {max-width: 100%;font: normal 30px/140% 'Noto-Sans-regular';}
+    .attention-text {padding: 30px;margin-bottom: 30px;}
 }
 
 @media  (max-width: 575.98px) {
@@ -540,8 +558,9 @@
     }
 
     .contacts {padding-bottom: 50px;}
-
-
+    main.contacts {padding: 30px 0 50px 0;}
+    .contacts-title {font: normal 24px/140% 'Noto-Sans-regular';margin-bottom: 30px;}
+    .attention-text-subtitle {font: normal 16px/140% 'Noto-Sans-regular';}
 }
 
 @media  (max-width: 460px) {
@@ -553,6 +572,9 @@
         max-width: 300px;
         margin: 0 auto;
     }
+
+
+
 }
 
 @media  (max-width: 400px) {
@@ -591,4 +613,8 @@
     .doctors-slider-next {right: -15px;}
     .doctors-slider-prev {left: -15px;}
     main.page-one-doctors {padding: 30px 0 50px 0;}
+
+
+    .operating-mode {padding: 20px 30px}
+
 }

@@ -1,0 +1,20 @@
+.banner-doctors.banner-vacancies {
+    background-image: url("../image/vacancies-banner.png");
+    background-position: center;
+
+}
+
+.banner-vacancies .breadcrumbs ,.banner-vacancies .banner-title {
+    color: #FFFFFF;
+}
+
+.banner-vacancies .breadcrumbs {
+    margin-bottom: 70px;
+}
+
+.no-vacancies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
