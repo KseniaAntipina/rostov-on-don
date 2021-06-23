@@ -231,7 +231,7 @@ nav {
     position: relative;
 }
 
-.gen-submenu, .uzi-submenu , .nevr-submenu {
+.submenu {
     position: absolute;
     width: 257px;
     left: 255px;

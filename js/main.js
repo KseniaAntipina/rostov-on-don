@@ -276,11 +276,12 @@ if (mediaQuery.matches) {
 
 let nav = document.querySelector('nav')
 let openSubmenuCatalog = document.getElementById('openCatalog');
-let closeSubmenuCatalog = document.getElementById('submenuPrev');
+let closeSubmenuCatalog = document.querySelector('.catalog-menu_prev');
 let navItems = document.getElementById('navItems');
 let catalogMenu = document.getElementById('catalogMenu');
 let mobileInfoHide = document.getElementById('infoItems');
 let navCatalog = document.getElementById('navCatalog');
+
 
     openSubmenuCatalog.onclick = () => {
         navItems.style.display = "none";
