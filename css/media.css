@@ -89,8 +89,11 @@
         display: none;
     }
 
-    .dropdown-menu .submenu {display:none}
+
+
+    .dropdown-menu .submenu, .dropdown-menu.open .submenu-link {display:none}
     .dropdown-menu.open .submenu { display: block;}
+
 
 
     .all-doctors-item,

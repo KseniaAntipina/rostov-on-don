@@ -1,0 +1,28 @@
+.banner-doctors.banner-promo {
+    background-image: url("../image/banner-promo.png");
+}
+
+.banner-promo .breadcrumbs {
+    margin-bottom: 47px;
+}
+
+.banner-title {
+    margin-bottom: 20px;
+}
+
+.banner-promo .banner-desc {
+    color: #333333;
+}
+
+main.promo {
+    padding-top: 20px;
+}
+
+.promo-all {
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-item {
+    padding: 50px 0;
+}

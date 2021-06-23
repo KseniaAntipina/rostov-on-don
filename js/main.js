@@ -298,73 +298,126 @@ let nevrSubmenu = document.getElementById('nevrSubmenu');*/
 
 
 
-openSubmenuCatalog.onclick = () => {
-    navItems.style.display = "none";
-    catalogMenu.style.display= "block";
-    mobileInfoHide.style.display = "none";
-};
-
-closeSubmenuCatalog.onclick = () =>  {
-    catalogMenu.style.display= "none";
-    navItems.style.display = "flex";
-    mobileInfoHide.style.display = "block";
-};
 
 
-/*(function($){
-    $(document).ready(function(){
-        $('.dropdown-menu').on('click', function() {
 
-            navCatalog.style.display = "none"
-            nav.append($(this).children('ul'))
-            $(this).children('ul').addClass('open');
+// (function() {
+//
+//     let items = document.querySelectorAll('.dropdown-menu');
+//
+//     document.querySelector('.dropdown-menu').addEventListener('click', function() {
+//
+//         navCatalog.style.display = "none";
+//         let res = document.querySelector(`.${this.classList}>ul`)
+//         console.log(res);
+//         res.classList.add('open')
+//
+//         nav.append(res);
+//
+//     }, false);
+// })();
 
+
+    openSubmenuCatalog.onclick = () => {
+        navItems.style.display = "none";
+        catalogMenu.style.display= "block";
+        mobileInfoHide.style.display = "none";
+    };
+
+    closeSubmenuCatalog.onclick = () =>  {
+        catalogMenu.style.display= "none";
+        navItems.style.display = "flex";
+        mobileInfoHide.style.display = "block";
+    };
+
+
+    closeUziSubmenu.onclick = () =>  {
+        uziSubmenu.style.display= "none";
+        navCatalog.style.display = "block";
+    };
+
+    closeNevrSubmenu.onclick = () =>  {
+        nevrSubmenu.style.display= "none";
+        navCatalog.style.display = "block";
+    };
+
+
+
+
+   /* (function() {
+        // get all elements with class 'more'
+        let expandableElem = document.querySelectorAll('.dropdown-menu');
+
+        // loop through each expandable element, adding click listener
+        expandableElem.forEach(li => {
+            li.addEventListener(
+                'click',
+                function() {
+
+                    navCatalog.style.display = "none";
+
+                    console.log(this.children[1])
+
+                    this.children[1].classList.toggle('open')
+
+                    nav.append(this.children[1]);
+
+
+                },
+                false
+            )
         });
-    });
-})(jQuery);*/
+    })();*/
 
-/*let linksSubmenuAll = document.querySelectorAll('.dropdown-menu')
+    // (function() {
+    //     let elm = document.querySelectorAll('.dropdown-menu');
+    //     for (let i=0; i< elm.length - 1; i++) {
+    //         elm[i].addEventListener('click', function() {
+    //             // optional 'remove' other elm's
+    //             navCatalog.style.display = "none";
+    //             console.log(elm[i].children[1])
+    //             let res = elm[i].children[1];
+    //
+    //             res.classList.toggle('open')
+    //
+    //             nav.append(res);
+    //
+    //             closeGenSubmenu.onclick = () =>  {
+    //                 res.classList.toggle('open')
+    //                 navCatalog.style.display = "block";
+    //             };
+    //
+    //
+    //
+    //         }, false);
+    //
+    //     }
+    //
+    // })();
 
-    for (let i = 0; i < linksSubmenuAll.length; i++) {
-        linksSubmenuAll[i].onclick = () => {
 
+
+
+
+
+let dropdownMenu = document.querySelectorAll('.dropdown-menu');
+
+dropdownMenu.forEach(el => {
+    el.addEventListener('click', function () {
             navCatalog.style.display = "none";
-            linksSubmenuAll[i].childNodes[3].classList.add("open")
-            nav.append(linksSubmenuAll[i].childNodes[3]);
+            console.log(el)
+            el.classList.toggle('open')
+            nav.append(el);
+        },
+        false
+    )
+/*    closeGenSubmenu.onclick = function () {
 
-        }*/
+        el.classList.remove('open')
+        //navCatalog.style.display = "block";
+    }*/
+})
 
-(function() {
-    // get all elements with class 'more'
-    let expandableElem = document.querySelectorAll('.dropdown-menu');
-
-    // loop through each expandable element, adding click listener
-    expandableElem.forEach(li => {
-        li.addEventListener(
-            'click',
-            function() {
-                console.log(this)
-                navCatalog.style.display = "none";
-                nav.append(this);
-                this.classList.toggle('open')
-            },
-            false
-        )
-    });
-})();
-
-       /* linksSubmenuAll[i].childNodes[3].onclick = () =>  {
-            linksSubmenuAll[i].childNodes[3].classList.remove("open")
-            navCatalog.style.display = "block";
-        };
-
-    }
-
-
-   /* navCatalog.style.display = "none";
-    $($(this)[0].children[1]).addClass('open');
-    nav.append($(this)[0].children[1])
-*/
 
 
 
@@ -389,20 +442,8 @@ openNevrSubmenu.onclick = () => {
     nevrSubmenu.style.display= "block";
 };*/
 
-closeGenSubmenu.onclick = () =>  {
-    genSubmenu.style.display= "none";
-    navCatalog.style.display = "block";
-};
 
-closeUziSubmenu.onclick = () =>  {
-    uziSubmenu.style.display= "none";
-    navCatalog.style.display = "block";
-};
 
-closeNevrSubmenu.onclick = () =>  {
-    nevrSubmenu.style.display= "none";
-    navCatalog.style.display = "block";
-};
 
 
 }
