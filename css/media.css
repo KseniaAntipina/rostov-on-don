@@ -92,7 +92,7 @@
 
 
     .dropdown-menu .submenu, .dropdown-menu.open .submenu-link {display:none}
-    .dropdown-menu.open .submenu { display: block;}
+    .open.submenu { display: block;}
 
 
 

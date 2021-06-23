@@ -269,54 +269,18 @@ burger.onclick = function myFunction() {
 /*скрипт мобильного меню*/
 
 
-
 window.addEventListener('resize', function(event){
 
 const mediaQuery = window.matchMedia('(max-width: 992px)')
 if (mediaQuery.matches) {
 
 let nav = document.querySelector('nav')
-
 let openSubmenuCatalog = document.getElementById('openCatalog');
 let closeSubmenuCatalog = document.getElementById('submenuPrev');
 let navItems = document.getElementById('navItems');
 let catalogMenu = document.getElementById('catalogMenu');
 let mobileInfoHide = document.getElementById('infoItems');
 let navCatalog = document.getElementById('navCatalog');
-let closeGenSubmenu = document.getElementById('toPrevFromGen')
-let closeUziSubmenu = document.getElementById('toPrevFromUzi')
-let closeNevrSubmenu = document.getElementById('toPrevFromNevr')
-
-
-/*let openGenSubmenu = document.getElementById('genSubmenuLink')
-let openUziSubmenu = document.getElementById('uziSubmenuLink')
-let openNevrSubmenu = document.getElementById('nevrSubmenuLink')*/
-
-/*let genSubmenu = document.getElementById('genSubmenu');
-let uziSubmenu = document.getElementById('uziSubmenu');
-let nevrSubmenu = document.getElementById('nevrSubmenu');*/
-
-
-
-
-
-
-// (function() {
-//
-//     let items = document.querySelectorAll('.dropdown-menu');
-//
-//     document.querySelector('.dropdown-menu').addEventListener('click', function() {
-//
-//         navCatalog.style.display = "none";
-//         let res = document.querySelector(`.${this.classList}>ul`)
-//         console.log(res);
-//         res.classList.add('open')
-//
-//         nav.append(res);
-//
-//     }, false);
-// })();
-
 
     openSubmenuCatalog.onclick = () => {
         navItems.style.display = "none";
@@ -330,120 +294,32 @@ let nevrSubmenu = document.getElementById('nevrSubmenu');*/
         mobileInfoHide.style.display = "block";
     };
 
+     (function() {
 
-    closeUziSubmenu.onclick = () =>  {
-        uziSubmenu.style.display= "none";
-        navCatalog.style.display = "block";
-    };
-
-    closeNevrSubmenu.onclick = () =>  {
-        nevrSubmenu.style.display= "none";
-        navCatalog.style.display = "block";
-    };
-
-
-
-
-   /* (function() {
-        // get all elements with class 'more'
-        let expandableElem = document.querySelectorAll('.dropdown-menu');
+        let allOpenLink = document.querySelectorAll('.dropdown-menu>a');
 
         // loop through each expandable element, adding click listener
-        expandableElem.forEach(li => {
-            li.addEventListener(
+         allOpenLink.forEach(el => {
+            el.addEventListener(
                 'click',
-                function() {
-
+                function myfunc() {
+                    let res = el.nextElementSibling; // подменю ul
+                    res.classList.add('open')
+                    if (res.classList.contains('open')) {
+                        nav.append(res);
+                    }
                     navCatalog.style.display = "none";
 
-                    console.log(this.children[1])
-
-                    this.children[1].classList.toggle('open')
-
-                    nav.append(this.children[1]);
-
-
+                    res.firstElementChild.onclick = () =>  {
+                        el.after(res);
+                        res.classList.remove('open')
+                        navCatalog.style.display = "block";
+                    };
                 },
-                false
+                true
             )
         });
-    })();*/
-
-    // (function() {
-    //     let elm = document.querySelectorAll('.dropdown-menu');
-    //     for (let i=0; i< elm.length - 1; i++) {
-    //         elm[i].addEventListener('click', function() {
-    //             // optional 'remove' other elm's
-    //             navCatalog.style.display = "none";
-    //             console.log(elm[i].children[1])
-    //             let res = elm[i].children[1];
-    //
-    //             res.classList.toggle('open')
-    //
-    //             nav.append(res);
-    //
-    //             closeGenSubmenu.onclick = () =>  {
-    //                 res.classList.toggle('open')
-    //                 navCatalog.style.display = "block";
-    //             };
-    //
-    //
-    //
-    //         }, false);
-    //
-    //     }
-    //
-    // })();
-
-
-
-
-
-
-let dropdownMenu = document.querySelectorAll('.dropdown-menu');
-
-dropdownMenu.forEach(el => {
-    el.addEventListener('click', function () {
-            navCatalog.style.display = "none";
-            console.log(el)
-            el.classList.toggle('open')
-            nav.append(el);
-        },
-        false
-    )
-/*    closeGenSubmenu.onclick = function () {
-
-        el.classList.remove('open')
-        //navCatalog.style.display = "block";
-    }*/
-})
-
-
-
-
-
-
-
-/*openGenSubmenu.onclick = () => {
-    navCatalog.style.display = "none";
-    nav.append(genSubmenu);
-    genSubmenu.style.display= "block";
-};
-
-openUziSubmenu.onclick = () => {
-    navCatalog.style.display = "none";
-    nav.append(uziSubmenu);
-    uziSubmenu.style.display= "block";
-};
-
-openNevrSubmenu.onclick = () => {
-    navCatalog.style.display = "none";
-    nav.append(nevrSubmenu);
-    nevrSubmenu.style.display= "block";
-};*/
-
-
-
+    })();
 
 
 }
