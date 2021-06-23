@@ -23,6 +23,80 @@ main.promo {
     flex-direction: column;
 }
 
-.promo-item {
+.promo-item-wrap {
     padding: 50px 0;
+    display: flex;
+}
+
+.promo-item-card {
+    margin-right: 43px;
+    flex: 0 0 620px;
+}
+
+.promo-item-card-text {
+    padding: 45px 0 25px 40px;
+    box-sizing: border-box;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.promo-item:not(:last-child) {
+    border-bottom: 1px solid #DFE2EA;
+}
+
+
+.promo-item-card-title {
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    margin-bottom: 10px;
+
+}
+
+.promo-item-card-price {
+    font-family: Montserrat-Regular, sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.promo-item-card-price span {
+    font-family: Montserrat-SemiBold, sans-serif;
+}
+
+.promo-item-card-desc {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 20px;
+    font-family: Noto-Sans-regular, sans-serif;
+}
+
+.promo-item-card-btn {
+    width: 210px;
+    height: 50px;
+    padding: 14px 0;
+    box-sizing: border-box;
+    font-family: Noto-Sans-regular, sans-serif;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.promo-item-card-btn:hover {
+    background: #047FCF;
+}
+
+.promo-item-text {
+    font-family: Noto-Sans-regular, sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    color: #333333;
+}
+
+.promo-item-text p:nth-child(1) {
+    margin-top: 0;
+}
+
+.promo-item-text p:last-child {
+    margin-bottom: 0;
 }

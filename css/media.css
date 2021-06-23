@@ -100,6 +100,16 @@
     .all-doctors-item:not(:nth-child(4n)),
     .genetics-doctors-item:not(:last-child),
     .genetics-doctors-item { margin: 0 15px;}
+
+    .promo-item-card {flex: 0 0 50%}
+
+    .promo-item-card-text {
+        margin-right: 0;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 10px;
+    }
+
 }
 
 @media  (max-width: 1152px) {
@@ -169,6 +179,7 @@
 
     .title-in-main {margin-bottom: 30px;}
 
+    .promo-item-card {margin: 0 20px 0px 0;}
 }
 
 
@@ -436,6 +447,14 @@
     .contacts-content {flex-wrap: wrap;}
     .operating-mode { padding: 20px 50px; flex: 0 0 100%;}
 
+
+    main.promo {padding-top: 0px;}
+
+    .promo-item-wrap {flex-wrap: wrap;}
+    .promo-item-card {flex: 0 0 100%}
+    .promo-item-card {margin-bottom: 20px;}
+
+
 }
 
 @media (max-width: 767.98px) {
@@ -494,6 +513,8 @@
 
     .contacts-title  {max-width: 100%;font: normal 30px/140% 'Noto-Sans-regular';}
     .attention-text {padding: 30px;margin-bottom: 30px;}
+
+
 }
 
 @media  (max-width: 575.98px) {
@@ -577,6 +598,14 @@
     }
 
 
+    .promo-item-wrap {padding: 30px 0}
+    .promo-item-card-title {font-size: 22px;}
+    .promo-item-card-btn {width: 180px;
+        height: 40px;
+        padding: 9px 0;}
+    .promo-item-card-desc {margin-bottom: 20px;}
+
+    .promo-item-card-text { padding: 45px 40px 25px 40px;}
 
 }
 
@@ -620,4 +649,5 @@
 
     .operating-mode {padding: 20px 30px}
 
+    .promo-item-card-text {padding: 25px;}
 }
