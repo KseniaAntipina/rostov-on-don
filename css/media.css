@@ -85,10 +85,6 @@
     .show {display: block;}
     .hide {display: none;}
 
-    .dropdown-menu:hover>ul {
-        display: none;
-    }
-
 
 
     .dropdown-menu .submenu, .dropdown-menu.open .submenu-link {display:none}
@@ -180,6 +176,8 @@
     .title-in-main {margin-bottom: 30px;}
 
     .promo-item-card {margin: 0 20px 0px 0;}
+
+    .nav-items .dropdown-menu > ul {left:-25px}
 }
 
 
@@ -313,11 +311,15 @@
         right: -20px;
     }
 
-    .nav.responsive  .downmenu-link:after {
+    .nav.responsive  .submenu-link:after {
         content: url("../image/arrow-submenu.svg");
         position: absolute;
-        top: 5px;
+        top: 10px;
         right: -20px;
+    }
+
+    .nav.responsive #navItems .submenu-link:after {
+        top: -2px;
     }
 
     .nav.responsive .nav-items li ,
@@ -406,6 +408,10 @@
         width: auto;
     }
 
+    .nav-items>li {
+        padding: 0;
+    }
+
 
 
     /*page one service*/
@@ -454,6 +460,9 @@
     .promo-item-card {flex: 0 0 100%}
     .promo-item-card {margin-bottom: 20px;}
 
+    .dropdown-menu:hover>ul {
+        display: none;
+    }
 
 }
 
@@ -557,8 +566,17 @@
 
     .submenu-link:after {right: 40px;}
     .nav-catalog {flex: none;height: auto;}
-    .nav.responsive .downmenu-link:after {right: 26px;}
 
+    .submenu-link {width: 100%;
+        display: block;
+        text-align: left!important;}
+    .nav.responsive .submenu-link:after {
+        right: 26px;}
+    .open.submenu {
+        display: block;
+        width: 86%;
+        margin: 0 auto;
+    }
     /*page service one*/
 
     .banner-genetics {padding-top: 20px;background-position: center left;}
@@ -585,6 +603,8 @@
     main.contacts {padding: 30px 0 50px 0;}
     .contacts-title {font: normal 24px/140% 'Noto-Sans-regular';margin-bottom: 30px;}
     .attention-text-subtitle {font: normal 16px/140% 'Noto-Sans-regular';}
+
+    .catalog-menu { width: 86%;margin: 50px auto auto 0;}
 }
 
 @media  (max-width: 460px) {
@@ -606,6 +626,8 @@
     .promo-item-card-desc {margin-bottom: 20px;}
 
     .promo-item-card-text { padding: 45px 40px 25px 40px;}
+
+
 
 }
 
@@ -650,4 +672,13 @@
     .operating-mode {padding: 20px 30px}
 
     .promo-item-card-text {padding: 25px;}
+
+
+    .catalog-menu {margin: 0px auto auto 0;}
+}
+
+@media  (max-width: 330px) {
+    .catalog-menu {
+        margin: 120px auto auto 0;
+    }
 }

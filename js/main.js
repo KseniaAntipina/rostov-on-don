@@ -277,9 +277,9 @@ if (mediaQuery.matches) {
 let nav = document.querySelector('nav')
 let openSubmenuCatalog = document.getElementById('openCatalog');
 let closeSubmenuCatalog = document.querySelector('.catalog-menu_prev');
-let navItems = document.getElementById('navItems');
 let catalogMenu = document.getElementById('catalogMenu');
 let mobileInfoHide = document.getElementById('infoItems');
+let navItems = document.getElementById('navItems');
 let navCatalog = document.getElementById('navCatalog');
 
 
@@ -311,10 +311,21 @@ let navCatalog = document.getElementById('navCatalog');
                     }
                     navCatalog.style.display = "none";
 
+                    if (el.closest('#navItems')) {
+                        navItems.style.display = "none";
+                        mobileInfoHide.style.display = "none";
+                    }
+
                     res.firstElementChild.onclick = () =>  {
                         el.after(res);
                         res.classList.remove('open')
                         navCatalog.style.display = "block";
+
+                        if (el.closest('#navItems')) {
+                            navItems.style.display = "block";
+                            mobileInfoHide.style.display = "block";
+                        }
+
                     };
                 },
                 true
