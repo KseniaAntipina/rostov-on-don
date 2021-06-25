@@ -69,11 +69,10 @@ main.licenses {
 
 
 .licenses-photo img {
-    max-width: 190px;
+    max-width: 188px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    display: block;
 }
-
-
 
 .licenses-text {
     font-family: Noto-Sans-regular, sans-serif;
