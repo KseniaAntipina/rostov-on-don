@@ -3,15 +3,11 @@
     .white-arrow-prev {left: 3%}
 }
 
-
-
 @media  (max-width: 1259.98px) {
 
     /*page service all*/
 
-    .container {
-        max-width: 1140px;
-    }
+    .container { max-width: 1140px; }
 
     .services-subsection_content {
         columns: 2 auto;
@@ -31,13 +27,9 @@
         width: auto;
     }
 
-    .address, .phone, .analyzes , .nav-items{
-        margin-right: auto;
-    }
+    .address, .phone, .analyzes , .nav-items{margin-right: auto;}
 
-    .eye {
-        margin-left: 40px;
-    }
+    .eye {margin-left: 40px;}
 
     /*page service one*/
 
@@ -69,28 +61,17 @@
         right: 0;
     }
 
-    .services-item1 {
-        margin-right: 20px;
-    }
-    .doctors-services-item {
-        flex: 0 1 50%;
-    }
+    .services-item1 {margin-right: 20px;}
+    .doctors-services-item {flex: 0 1 50%;}
 
-    .additional-services-items {
-        grid-template-columns: repeat(2, 50% );
-    }
-
+    .additional-services-items {grid-template-columns: repeat(2, 50% );}
     .services-main-content {grid-template-columns: repeat(3, 33.33%);}
 
     .show {display: block;}
     .hide {display: none;}
 
-
-
     .dropdown-menu .submenu, .dropdown-menu.open .submenu-link {display:none}
     .open.submenu { display: block;}
-
-
 
     .all-doctors-item,
     .all-doctors-item:not(:nth-child(4n)),
@@ -106,32 +87,23 @@
         border-radius: 10px;
     }
 
-    .banner-doctors.banner-licenses {
-        background-position: center;
-    }
+    .banner-doctors.banner-licenses {background-position: center;}
 
     .licenses-photo {flex: 0 0 55%;max-width: calc(55% - 7px);}
     .licenses-content {flex: 0 0 45%;max-width: calc(45% - 7px);}
 
+
+
 }
 
 @media  (max-width: 1152px) {
-    .container {
-        max-width: 1090px;
-    }
+    .container {max-width: 1090px;}
 
-    .btn-call {
-        display: none;
-    }
+    .btn-call {display: none;}
 
-    .phone {
-        margin-left: 25px;
-        margin-right: 0;
-    }
+    .phone { margin-left: 25px; margin-right: 0;}
 
-    .address {
-        margin-right: 0;
-    }
+    .address {margin-right: 0;}
 
     .eye {
         background-image: url("../image/eye.svg");
@@ -152,43 +124,37 @@
     .doctor-content-right {flex: 0 0 100%}
     .doctor-image {flex: 0 0 100%;margin: 0 0 30px 0;text-align: center}
 
-
     .licenses-all {flex-wrap: wrap}
     .licenses-photo,  .licenses-content {flex: 0 0 100%; max-width: 100%; margin-right: 0;}
     .licenses-photo-wrap {flex: 0 0 25%; max-width: 25%;margin-right: 0;text-align: center;}
     .licenses-photo img {max-width: 90%;}
+
+    .about img:first-child {
+        width: 100%;
+        margin: 0 auto 30px auto;
+        float:none;
+    }
+    main.about {padding: 50px 0}
+    main.about p, .about-text-banner {margin: 0 0 20px 0;}
+
 }
 
 @media  (max-width: 1090px) {
-    .container {
-        max-width: 991px;
-    }
+    .container {max-width: 991px;}
 
-    .nav-catalog {
-        flex: 0 1 220px;
-    }
-    .nav-items {
-        margin-left: 25px;
-    }
+    .nav-catalog {flex: 0 1 220px;}
+    .nav-items {margin-left: 25px;}
 
-    .nav-items li:not(:last-child) {
-        margin-right: 40px;
-    }
+    .nav-items li:not(:last-child) {margin-right: 40px;}
 
-    .submenu {
-        width: 220px;
-        left: 220px;
-    }
+    .submenu {width: 220px;left: 220px;}
 
     main.main-page section:not(:last-child) {
         margin-bottom: 40px;
     }
     .main-page {padding-top: 40px;}
-
     .title-in-main {margin-bottom: 30px;}
-
     .promo-item-card {margin: 0 20px 0px 0;}
-
     .nav-items .dropdown-menu > ul {left:-25px}
 }
 
@@ -424,8 +390,6 @@
         padding: 0;
     }
 
-
-
     /*page one service*/
 
     .genetics-price-item {
@@ -481,6 +445,8 @@
         max-width: 33.33%;
         margin-right: 0;
     }
+
+
 
 }
 
@@ -627,6 +593,7 @@
     .catalog-menu { width: 86%;margin: 50px auto auto 0;}
     main.licenses { padding: 40px 0 40px 0;  }
     .licenses-text {margin-bottom: 30px;}
+
 }
 
 @media  (max-width: 460px) {
@@ -649,7 +616,7 @@
 
     .promo-item-card-text { padding: 45px 40px 25px 40px;}
 
-
+    .float-image {margin-bottom: 20px;}
 
 }
 
