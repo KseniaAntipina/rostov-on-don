@@ -106,6 +106,13 @@
         border-radius: 10px;
     }
 
+    .banner-doctors.banner-licenses {
+        background-position: center;
+    }
+
+    .licenses-photo {flex: 0 0 55%;max-width: calc(55% - 7px);}
+    .licenses-content {flex: 0 0 45%;max-width: calc(45% - 7px);}
+
 }
 
 @media  (max-width: 1152px) {
@@ -145,6 +152,11 @@
     .doctor-content-right {flex: 0 0 100%}
     .doctor-image {flex: 0 0 100%;margin: 0 0 30px 0;text-align: center}
 
+
+    .licenses-all {flex-wrap: wrap}
+    .licenses-photo,  .licenses-content {flex: 0 0 100%; max-width: 100%; margin-right: 0;}
+    .licenses-photo-wrap {flex: 0 0 25%; max-width: 25%;margin-right: 0;text-align: center;}
+    .licenses-photo img {max-width: 90%;}
 }
 
 @media  (max-width: 1090px) {
@@ -464,6 +476,12 @@
         display: none;
     }
 
+    .licenses-photo-wrap {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        margin-right: 0;
+    }
+
 }
 
 @media (max-width: 767.98px) {
@@ -523,6 +541,8 @@
     .contacts-title  {max-width: 100%;font: normal 30px/140% 'Noto-Sans-regular';}
     .attention-text {padding: 30px;margin-bottom: 30px;}
 
+    .licenses-photo-wrap {flex: 0 0 50%;max-width: 50%;}
+    .licenses-photo img {max-width: 90%;}
 
 }
 
@@ -605,6 +625,8 @@
     .attention-text-subtitle {font: normal 16px/140% 'Noto-Sans-regular';}
 
     .catalog-menu { width: 86%;margin: 50px auto auto 0;}
+    main.licenses { padding: 40px 0 40px 0;  }
+    .licenses-text {margin-bottom: 30px;}
 }
 
 @media  (max-width: 460px) {
@@ -674,7 +696,8 @@
     .promo-item-card-text {padding: 25px;}
 
 
-    .catalog-menu {margin: 0px auto auto 0;}
+    .catalog-menu {margin: 0 auto auto 0;}
+    .licenses-text p {margin-bottom: 20px;}
 }
 
 @media  (max-width: 330px) {

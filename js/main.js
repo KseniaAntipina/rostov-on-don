@@ -338,6 +338,13 @@ let navCatalog = document.getElementById('navCatalog');
 });
 
 
+$('[data-fancybox]').fancybox({
+    animationEffect  : false,
+    zoomOpacity : false,
+})
+
+
+
 
 
 

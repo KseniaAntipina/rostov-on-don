@@ -1,10 +1,22 @@
 /*общие, повторяющиеся стили*/
 
-*:not(.slick-slider, .slick-list, .slick-track, .new-select__list) {
+/**:not(.slick-slider, .slick-list, .slick-track,*/
+/*.new-select__list, .gallery_about,  .gallery_about img) {*/
+/*    -ms-transition: all 0.4s;*/
+/*    -o-transition: all 0.4s;*/
+/*    -webkit-transition: all 0.4s;*/
+/*    transition: all 0.4s;*/
+/*    scroll-behavior: smooth;*/
+/*}*/
+
+a:hover , .btn-blue:hover , .btn-white:hover , .doctors-item:hover {
     -ms-transition: all 0.4s;
     -o-transition: all 0.4s;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
+}
+
+* {
     scroll-behavior: smooth;
 }
 
