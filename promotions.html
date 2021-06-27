@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet"  href="./css/main.css">
     <title>Акции</title>
 </head>
@@ -31,7 +32,7 @@
             </div>
             <div class="address">г. Ростов-на-Дону, ул. Козлова, 65е</div>
             <div class="phone"><a href="tel:+88003334538">8 (800) 333-45-38</a></div>
-            <a href="#" class="btn-white btn-call">Заказать звонок</a>
+            <a href="#consultationModal1" data-fancybox="" class="btn-white btn-call">Заказать звонок</a>
         </div>
     </div>
 </header>
@@ -147,7 +148,7 @@
                             <div class="promo-item-card-desc">
                                 Записаться к врачу онлайн
                             </div>
-                            <a href="#" class="promo-item-card-btn btn-blue">Записаться</a>
+                            <a href="#consultationModal1" data-fancybox="" class="promo-item-card-btn btn-blue">Записаться</a>
                         </div>
                     </div>
                     <div class="promo-item-text">
@@ -172,7 +173,7 @@
                             <div class="promo-item-card-desc">
                                 Записаться к врачу онлайн
                             </div>
-                            <a href="#" class="promo-item-card-btn btn-blue">Записаться</a>
+                            <a href="#consultationModal1" data-fancybox="" class="promo-item-card-btn btn-blue">Записаться</a>
                         </div>
                     </div>
                     <div class="promo-item-text">
@@ -198,7 +199,7 @@
                             <div class="promo-item-card-desc">
                                 Записаться к врачу онлайн
                             </div>
-                            <a href="#" class="promo-item-card-btn btn-blue">Записаться</a>
+                            <a href="#consultationModal1" data-fancybox="" class="promo-item-card-btn btn-blue">Записаться</a>
                         </div>
                     </div>
                     <div class="promo-item-text">
@@ -223,7 +224,7 @@
                             <div class="promo-item-card-desc">
                                 Записаться к врачу онлайн
                             </div>
-                            <a href="#" class="promo-item-card-btn btn-blue">Записаться</a>
+                            <a href="#consultationModal1" data-fancybox="" class="promo-item-card-btn btn-blue">Записаться</a>
                         </div>
                     </div>
                     <div class="promo-item-text">
@@ -249,7 +250,7 @@
                             <div class="promo-item-card-desc">
                                 Записаться к врачу онлайн
                             </div>
-                            <a href="#" class="promo-item-card-btn btn-blue">Записаться</a>
+                            <a href="#consultationModal1" data-fancybox="" class="promo-item-card-btn btn-blue">Записаться</a>
                         </div>
                     </div>
                     <div class="promo-item-text">
@@ -274,7 +275,7 @@
                             <div class="promo-item-card-desc">
                                 Записаться к врачу онлайн
                             </div>
-                            <a href="#" class="promo-item-card-btn btn-blue">Записаться</a>
+                            <a href="#consultationModal1" data-fancybox="" class="promo-item-card-btn btn-blue">Записаться</a>
                         </div>
                     </div>
                     <div class="promo-item-text">
@@ -336,11 +337,46 @@
     </div>
 </footer>
 
-
+<!-- modal window -->
+<div id="consultationModal1" class="consultationModal">
+    <div class="wrap">
+        <p><strong>Выберите удобный<br>способ связи</strong></p>
+        <p>
+            <a href="whatsapp://send?phone=+79268121953">
+                <span class="consultationModal_whatsapp"></span><br>
+                WhatsApp
+            </a>
+            <a href="viber://add?number=+79268121953">
+                <span class="consultationModal_viber"></span><br>
+                Viber
+            </a>
+            <a href="tg://resolve?domain=genomed1">
+                <span class="consultationModal_telegram"></span><br>
+                Telegram
+            </a>
+        </p>
+        <form method="post" class="ajax_form" action="" id="forma-popap">
+            <input type="hidden" name="page" value="Таргетная терапия">
+            <input type="text" style="z-index:-100; position:absolute; opacity: 0; width: 0; height: 0;" name="user_f">
+            <input type="text" name="surname" value="" style="z-index:-100; position:absolute;opacity: 0;width: 0;height: 0;">
+            <input type="text" name="name" id="name1" value="" placeholder="Ваше имя">
+            <input type="tel" name="phone" id="phone1" value="" placeholder="Ваш телефон">
+            <input type="submit" value="Записаться" onclick="Comagic.addOfflineRequest({
+              name: $('#name1').val(),
+              email: ' ',
+              phone: $('#phone1').val()
+            }); ">
+            <input type="hidden" name="af_action" value="20dbdb4c0b3e8ab1eefd487e01c5ae7a">
+        </form>
+        <p class="consultationModal_desc">Нажимая на кнопку, вы даете согласие на обработку персональных данных</p>
+    </div>
+    <button type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg></button>
+</div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>

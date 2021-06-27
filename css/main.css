@@ -12,7 +12,11 @@
 @import url('promotions.css');
 @import url('licenses.css');
 @import url('about.css');
+@import url('reviews.css');
+@import url('reviews-one.css');
 @import url('footer.css');
+
+@import url('modal-window.css');
 
 @import url('media.css');
 

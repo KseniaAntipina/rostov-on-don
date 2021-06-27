@@ -1,0 +1,139 @@
+/*стили для модального окна "записаться"*/
+
+.consultationModal {
+    display: none;
+    max-width: 450px;
+    text-align: center;
+    padding: 19px 19px;
+    background: 0 0;
+}
+
+.consultationModal .wrap {
+    background: #fff;
+    padding: 30px;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+}
+
+.consultationModal p {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.consultationModal strong {
+    font-weight: 700;
+    font-size: 24px;
+    color: #596363;
+}
+
+.consultationModal p a {
+    display: inline-block;
+    font-size: 12px;
+    color: #7d8285;
+    margin: 0 10px;
+}
+
+.consultationModal p a span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0099ff;
+}
+
+.consultationModal_whatsapp {
+    background: url("../image/whatsapp.png") center center no-repeat #009AFF !important;
+    background-size: 24px auto !important;
+}
+
+.consultationModal_viber {
+    background: url("../image/viber.png") center center no-repeat #009AFF !important;
+    background-size: 24px auto !important;
+}
+
+.consultationModal_telegram {
+    background: url("../image/telegram.png") center center no-repeat #009AFF !important;
+    background-size: 24px auto !important;
+}
+
+.consultationModal input[type=text] {
+    height: 48px;
+    line-height: 46px;
+    padding: 0 20px 0 20px;
+    border: 1px solid rgba(165, 177, 184, 0.5);
+    border-radius: 25px;
+    width: 100%;
+    color: #2F3A40;
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.consultationModal input[type=tel] {
+    font-family: Gilroy-Regular, sans-serif;
+    height: 48px;
+    line-height: 46px;
+    padding: 0 20px 0 20px;
+    border: 1px solid rgba(165, 177, 184, 0.5);
+    border-radius: 25px;
+    width: 100%;
+    color: #2F3A40;
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.consultationModal input.error {
+    border: 1px solid #009AFF;
+}
+
+.consultationModal input[type=submit] {
+    font-family: Gilroy-Regular, sans-serif;
+    height: 48px;
+    line-height: 46px;
+    text-align: center;
+    border: none;
+    background: #009AFF;
+    border-radius: 35px;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.consultationModal_desc {
+    font-size: 12px;
+    color: #7d8285;
+}
+
+.fancybox-close-small {
+    opacity: 1;
+}
+
+.fancybox-button svg {
+    display: none;
+}
+
+.ajax_form .error {
+    border: 1px solid #1A2A8A !important;
+}
+
+.product-popup [data-fancybox-close] {
+    background: #335DFF;
+    top: -19px;
+    right: -19px;
+}
+
+[data-fancybox-close] {
+    background-image: url('../image/krest-forma.png');
+    width: 28px;
+    height: 28px;
+}
+
+
+@media (max-width: 340px) {
+    .consultationModal p a {
+        margin: 0 8px;
+    }
+}

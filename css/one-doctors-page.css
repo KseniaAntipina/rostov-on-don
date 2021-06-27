@@ -10,6 +10,10 @@
     margin-bottom: 10px;
 }
 
+.banner-one-doctor .breadcrumbs {
+    margin-bottom: 70px;
+}
+
 .banner-doctor-prof {
     font-family: Noto-Sans-regular, sans-serif;
     font-size: 14px;
@@ -23,6 +27,8 @@ main.page-one-doctors {
 .doctor-image img{
     max-width: 280px;
     border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px auto;
 }
 
 .doctor-content {
@@ -41,10 +47,6 @@ main.page-one-doctors {
     font-family: Noto-Sans-regular, sans-serif;
     font-size: 16px;
     line-height: 24px;
-}
-
-.doctor-text {
-    margin-bottom: 45px;
 }
 
 .doctor-text-name {
