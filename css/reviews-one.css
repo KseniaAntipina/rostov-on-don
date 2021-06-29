@@ -5,32 +5,32 @@
     margin: 0 0 13px;
 }
 
-.reviews-one .info {
+.articleContent .info {
     display: flex;
     align-items: center;
     margin-bottom: 18px;
 }
 
-.reviews-one .info img {
+.articleContent .info img {
     margin: 0 17px 0 0;
 }
 
-.reviews-one .publishedAt {
+.articleContent .publishedAt {
     margin: 0;
     font-size: 14px;
     line-height: 150%;
     color: rgba(12,19,61,.3);
 }
 
-.reviews-one .links a {
+.articleContent .links a {
     display: inline-block;
 }
 
-.reviews-one .links a:not(:last-child) {
+.articleContent .links a:not(:last-child) {
     margin-right: 10px;
 }
 
-.reviews-one .mainText {
+.articleContent .mainText {
     font-family: Noto-Sans-regular, sans-serif;
     font-size: 16px;
     line-height: 150%;
@@ -38,17 +38,17 @@
     margin-bottom: 50px;
 }
 
-.reviews-one .reviews-btn {
+.articleContent .reviews-btn {
     display: inline-block;
     padding: 20px 0px;
     cursor: pointer;
 }
 
-.reviews-one .reviews-one-btns .reviews-btn:nth-child(1) {
+.articleContent .reviews-one-btns .reviews-btn:nth-child(1) {
     margin-right: 20px;
 }
 
-.reviews-one .reviews-one-btns .reviews-btn:hover {
+.articleContent .reviews-one-btns .reviews-btn:hover {
     background: #009AFF;
     border-radius: 4px;
     color: #fff;

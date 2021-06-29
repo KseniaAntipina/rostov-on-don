@@ -385,12 +385,6 @@ nav {
 
 /*main content*/
 
-.main {
-    background: #F8FBFC;
-    padding-top: 70px;
-    position: relative;
-}
-
 .main-content {
     display: flex;
 }

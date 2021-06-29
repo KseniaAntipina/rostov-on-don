@@ -614,8 +614,8 @@
     .licenses-text {margin-bottom: 30px;}
 
     .infoTopVideo {margin-bottom: 30px;}
-    .reviews-one .reviews-one-btns .reviews-btn,
-    .reviews-one .reviews-one-btns .reviews-btn:nth-child(1) {
+    .articleContent .reviews-one-btns .reviews-btn,
+    .articleContent .reviews-one-btns .reviews-btn:nth-child(1) {
         display:block;
         margin: 0 auto 15px auto;
     }
