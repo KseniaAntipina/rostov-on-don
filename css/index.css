@@ -1,15 +1,3 @@
-main {
-    background: #F8FBFC;
-}
-
-.main-page {
-    padding-top: 50px;
-}
-
-main.main-page section:not(:last-child) {
-    margin-bottom: 70px;
-}
-
 .title-in-main {
     font-family: Gilroy-Semibold, sans-serif;
     font-size: 24px;
@@ -332,12 +320,12 @@ main.main-page section:not(:last-child) {
     right: 0;
 }
 
-.contacts {
-    padding-bottom: 110px;
-}
-
 .contacts-map img {
     max-width: 100%;
+}
+
+section.reviews {
+    margin-bottom: 70px;
 }
 
 

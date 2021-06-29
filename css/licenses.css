@@ -3,10 +3,6 @@
     background-position: left center;
 }
 
-main.licenses {
-    padding: 70px 0 110px 0;
-}
-
 .licenses-all {
     display: flex;
 }

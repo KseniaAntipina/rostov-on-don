@@ -94,6 +94,8 @@
 
     .licenses-photo img {max-width: 180px;}
 
+    .reviews-all {grid-gap: 30px;}
+
 }
 
 @media  (max-width: 1152px) {
@@ -134,8 +136,6 @@
         margin: 0 auto 30px auto;
         float:none;
     }
-    main.about {padding: 50px 0}
-    main.about p, .about-text-banner {margin: 0 0 20px 0;}
 
 }
 
@@ -149,13 +149,12 @@
 
     .submenu {width: 220px;left: 220px;}
 
-    main.main-page section:not(:last-child) {
-        margin-bottom: 40px;
-    }
     .main-page {padding-top: 40px;}
     .title-in-main {margin-bottom: 30px;}
     .promo-item-card {margin: 0 20px 0px 0;}
     .nav-items .dropdown-menu > ul {left:-25px}
+
+    .reviews-all {grid-template-columns: 1fr 1fr;}
 }
 
 
@@ -418,8 +417,6 @@
     .reviews-item-img img {margin: 0 auto 15px auto;}
     .reviews-item-name, .reviews-item-date {text-align: center}
 
-    main.page-one-doctors {padding: 50px 0 70px 0;}
-
     .no-vacancies {height: 60vh;}
 
     .attention-text {flex-wrap: wrap; text-align: center;}
@@ -429,8 +426,6 @@
     .contacts-content {flex-wrap: wrap;}
     .operating-mode { padding: 20px 50px; flex: 0 0 100%;}
 
-
-    main.promo {padding-top: 0px;}
 
     .promo-item-wrap {flex-wrap: wrap;}
     .promo-item-card {flex: 0 0 100%}
@@ -446,7 +441,34 @@
         margin-right: 20px;
     }
 
+    .reviews-all .reviews-item-img img {
+        margin: 0 auto 10px auto;
+        display: block;
+    }
 
+    .reviews-all .reviews-item-name {margin-bottom: 5px;}
+
+
+    .articleContent.videoShow .videoReview iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .articleContent.videoShow .videoReview {
+        margin-top: 50px;
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+    }
+
+    #closeVideo {
+        position: absolute;
+        top: -30px;
+    }
 
 }
 
@@ -490,9 +512,6 @@
 
     /*slider doctors*/
 
-    main.page-doctors {
-        padding-bottom: 70px;
-    }
 
     .doctors-slider {
         width: 400px;
@@ -510,6 +529,8 @@
     .licenses-photo-wrap {flex: 0 0 50%;max-width: calc(50% - 10px);}
     .licenses-photo-wrap {margin-right: 0px;}
     .licenses-photo-wrap:nth-child(odd) {margin-right: 20px;}
+
+    .reviews-all {grid-template-columns: 1fr;}
 
 }
 
@@ -575,7 +596,6 @@
     .genetics-price-item:not(:last-child) {margin-bottom: 25px;}
 
     .doctors-services-item {background-size: auto}
-    main.genetics {padding-bottom: 60px;}
 
     .slider-text-wrap { padding-left: 50px;}
     .main-slider-item {height: 250px;padding-top: 40px;}
@@ -587,14 +607,22 @@
     }
 
     .contacts {padding-bottom: 50px;}
-    main.contacts {padding: 30px 0 50px 0;}
     .contacts-title {font: normal 24px/140% 'Noto-Sans-regular';margin-bottom: 30px;}
     .attention-text-subtitle {font: normal 16px/140% 'Noto-Sans-regular';}
 
     .catalog-menu { width: 86%;margin: 50px auto auto 0;}
-    main.licenses { padding: 40px 0 40px 0;  }
     .licenses-text {margin-bottom: 30px;}
 
+    .infoTopVideo {margin-bottom: 30px;}
+    .reviews-one .reviews-one-btns .reviews-btn,
+    .reviews-one .reviews-one-btns .reviews-btn:nth-child(1) {
+        display:block;
+        margin: 0 auto 15px auto;
+    }
+
+    .articleContent.videoShow .videoReview {
+        margin-bottom: 50px;
+    }
 }
 
 @media  (max-width: 460px) {
@@ -656,7 +684,7 @@
     .all-doctors-item:not(:nth-child(4n)) {margin: 0 7px;padding: 20px}
     .doctors-slider-next {right: -15px;}
     .doctors-slider-prev {left: -15px;}
-    main.page-one-doctors {padding: 30px 0 50px 0;}
+    main {padding: 30px 0 50px 0;}
 
 
     .operating-mode {padding: 20px 30px}

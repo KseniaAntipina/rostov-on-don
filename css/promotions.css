@@ -14,17 +14,21 @@
     color: #333333;
 }
 
-main.promo {
-    padding-top: 20px;
-}
 
 .promo-all {
     display: flex;
     flex-direction: column;
 }
 
-.promo-item-wrap {
+.promo-all .promo-item:first-child .promo-item-wrap {
+    padding-bottom: 50px;
+}
+
+.promo-all .promo-item:not(:first-child) .promo-item-wrap {
     padding: 50px 0;
+}
+
+.promo-item-wrap {
     display: flex;
 }
 

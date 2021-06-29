@@ -3,14 +3,6 @@
     background-position: center center;
 }
 
-main.about {
-    padding: 70px 0 110px 0;
-    font-family: Noto-Sans-regular, sans-serif;
-    font-size: 16px;
-    line-height: 150%;
-    color: #333333;
-}
-
 .float-image  {
     float: right;
     clear: both;
@@ -24,9 +16,6 @@ main.about {
     max-width: 100%;
 }
 
-main.about p {
-    margin: 0 0 30px 0;
-}
 
 
 

@@ -16,12 +16,6 @@
     color: #333333;
 }
 
-main.page-doctors {
-    background: #F8FBFC;
-    padding-top: 70px;
-    padding-bottom: 110px;
-}
-
 .doctors-slider {
     display: flex;
     flex-wrap: wrap;

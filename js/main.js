@@ -344,7 +344,13 @@ $('[data-fancybox]').fancybox({
 })
 
 
+document.getElementById('openVideo').onclick = () => {
+    document.getElementById('articleContent').classList.add('videoShow');
+}
 
+document.getElementById('closeVideo').onclick = () => {
+    document.getElementById('articleContent').classList.remove('videoShow');
+}
 
 
 
