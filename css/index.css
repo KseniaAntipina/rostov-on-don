@@ -9,7 +9,7 @@
 .advertising-banners, .services-main,
 .doctors-main-page , .about-center ,
 .reviews {
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
 .main-slider , .consultations-slider-wrap {
@@ -97,9 +97,6 @@
 
 /* consultations slider */
 
-.advertising-banners {
-    margin-bottom: 70px;
-}
 
 .consultation-slide {
     background-repeat: no-repeat;

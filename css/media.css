@@ -623,6 +623,12 @@
     .articleContent.videoShow .videoReview {
         margin-bottom: 50px;
     }
+
+    .advertising-banners, .services-main,
+    .doctors-main-page , .about-center ,
+    .reviews {
+        margin-bottom: 30px;
+    }
 }
 
 @media  (max-width: 460px) {
