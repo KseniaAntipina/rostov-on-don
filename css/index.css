@@ -6,6 +6,12 @@
     margin-bottom: 40px;
 }
 
+.advertising-banners, .services-main,
+.doctors-main-page , .about-center ,
+.reviews {
+    margin-bottom: 40px;
+}
+
 .main-slider , .consultations-slider-wrap {
     position: relative;
 }
@@ -172,6 +178,7 @@
     transform: rotate(180deg);
 }
 
+
 .services-main-wrap {
     background: #FFFFFF;
     border: 1px solid #DADADA;
@@ -324,8 +331,7 @@
     max-width: 100%;
 }
 
-section.reviews {
-    margin-bottom: 70px;
-}
+
+
 
 
