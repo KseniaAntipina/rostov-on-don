@@ -114,6 +114,20 @@ main {
     background: #047FCF;
 }
 
+#medesk-window {
+    display: none;
+    padding: 19px 19px;
+    background: 0 0;
+    width: 1030px;
+    height: auto;
+}
+
+.medesk-window_wrap {
+    padding: 15px;
+    background: #fff;
+    width: 100%;
+}
+
 
 
 

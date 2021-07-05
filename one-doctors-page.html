@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet"  href="./css/main.css">
     <title>Врачи</title>
 </head>
@@ -134,7 +135,7 @@
         <div class="doctor-content">
             <div class="doctor-image">
                 <img src="./image/doctor-big-photo.png" alt="фото врача">
-                <a href="#" class="btn-blue btn-appointment">Записаться</a>
+                <a href="#medesk-window" data-fancybox="" class="btn-blue btn-appointment">Записаться</a>
             </div>
             <div class="doctor-content-right">
                 <div class="doctor-text-name">
@@ -207,11 +208,16 @@
     </div>
 </footer>
 
-
+<div id="medesk-window">
+    <div class="medesk-window_wrap">
+        контент
+    </div>
+</div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>
