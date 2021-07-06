@@ -56,6 +56,11 @@
     box-sizing: border-box;
 }
 
+.contact-map {
+    flex: 0 1 978px;
+    max-width: 100%;
+}
+
 .operating-mode-title {
     font: normal 16px/140% 'Noto-Sans-bold';
     color: #333333;

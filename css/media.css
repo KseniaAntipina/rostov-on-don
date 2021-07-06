@@ -96,6 +96,10 @@
 
     .reviews-all {grid-gap: 30px;}
 
+    #map .element_block {
+        left: 20%;
+    }
+
 }
 
 @media  (max-width: 1152px) {
@@ -155,6 +159,10 @@
     .nav-items .dropdown-menu > ul {left:-25px}
 
     .reviews-all {grid-template-columns: 1fr 1fr;}
+
+    #map .element_block {
+        left: 15%;
+    }
 }
 
 
@@ -470,6 +478,10 @@
         top: -30px;
     }
 
+    #map .element_block {
+        left: 7%;
+    }
+
 }
 
 @media (max-width: 767.98px) {
@@ -531,6 +543,8 @@
     .licenses-photo-wrap:nth-child(odd) {margin-right: 20px;}
 
     .reviews-all {grid-template-columns: 1fr;}
+
+    #map .element_block {display: none;}
 
 }
 

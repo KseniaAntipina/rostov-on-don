@@ -366,7 +366,36 @@
     <div class="container">
         <div class="title-in-main">Контакты</div>
         <div class="contacts-map">
-            <img src="./image/map.png" alt="карта">
+            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+            </script>
+            <script type="text/javascript">
+                ymaps.ready(init);
+                var myMap
+                function init(){
+                    myMap = new ymaps.Map("map", {
+                        center: [47.235155, 39.697262],
+                        zoom: 16
+                    });
+
+                    var myPlacemark = new ymaps.Placemark([47.235155, 39.697262],
+                        {
+                            balloonContentBody: '<b>Медико-генетический центр «ГЕНОМЕД»</b><br><br>344018, г. Ростов-на-Дону ул. Козлова, 65е<br><a href="tel:+78003334538" class="phone_link comagic_phone">8 (800) 333-45-38</a>  (круглосуточно)<br><br>График работы:<br>Пн.– пт.: 8.00 – 19.00<br>Сб.: 9.00 – 17.00<br>Вс.: 9.00 – 15.00'
+                        }, {
+                            preset: 'islands#redMedicalIcon'
+                        });
+                    myMap.geoObjects.add(myPlacemark);
+                }
+            </script>
+            <div id="map" style="position:relative; overflow:hidden; margin:0; height:347px;" >
+                <div class="element_block  city_list3 active">
+                    <div class="element_block_name"><b>Режим работы<br> мед центра в Ростове:</b></div>
+                    <div class="element_block_r">
+                        <p>ПН–ПТ 8:00 – 19:00 </p>
+                        <p>СБ 9:00 – 17:00</p>
+                        <p>ВС 09:00 – 15:00</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
