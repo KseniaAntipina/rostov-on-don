@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     $('#mainSlider').slick({
         arrows: true,
@@ -132,7 +132,7 @@ $('.selectDoctors').each(function (index, element) {
     _this.wrap('<div class="select"></div>');
     $('<div>', {
         class: 'new-select',
-       text: _this.children('option:disabled').text()
+        text: _this.children('option:disabled').text()
     }).insertAfter(_this);
 
     const selectHead = _this.next('.new-select');
@@ -169,12 +169,13 @@ $('.selectDoctors').each(function (index, element) {
                 if ($(element).hasClass('selectDoctors')) {
                     let slidersProduct = document.querySelectorAll('.doctors-slider')
                     for (let i = 0; i < slidersProduct.length; i++) {
-                        if (slidersProduct[i].classList.contains(chooseItem)) {
+                        //if (slidersProduct[i].classList.contains(chooseItem)) {
+                        if (slidersProduct[i].getAttribute('data-value') == chooseItem) {
                             slidersProduct[i].classList.add('show');
                             slidersProduct[i].classList.remove('hide');
                             /*след  строки нужны для того чтобы слик слайдер не съезжал при смене блоков. Новые слайдеры добавлять сюда.*/
-                            $('#all-doctors-slider').slick('setPosition');
-                            $('#gynecologists-slider').slick('setPosition');
+                            //$('#all-doctors-slider').slick('setPosition');
+                            //$('#gynecologists-slider').slick('setPosition');
                         }
                         else {
                             slidersProduct[i].classList.remove('show');
@@ -209,7 +210,7 @@ $('.selectDoctors').each(function (index, element) {
 
 /*скрипт скролла на странице всех услуг*/
 
-(function() {
+(function () {
     'use strict';
 
     var sections = document.querySelectorAll('.services-subsection');
@@ -218,7 +219,7 @@ $('.selectDoctors').each(function (index, element) {
     function getClosestSection() {
         var sectionsLength = sections.length;
 
-        for(var index=0; index<sectionsLength; index++) {
+        for (var index = 0; index < sectionsLength; index++) {
             if (isBelowScroll(sections.item(index)))
                 break;
         }
@@ -230,19 +231,19 @@ $('.selectDoctors').each(function (index, element) {
     function isBelowScroll(element) {
         let position = element.getBoundingClientRect();
 
-        return position.bottom  > 0 ;
+        return position.bottom > 0;
     }
 
     function selectLink(id) {
 
-        Array.prototype.forEach.call(navLinks, function(element){
+        Array.prototype.forEach.call(navLinks, function (element) {
             element.classList.remove('active');
         });
 
-        document.querySelector('a[href="#'+id+'"]').classList.add('active');
+        document.querySelector('a[href="#' + id + '"]').classList.add('active');
     }
 
-    window.addEventListener('scroll', function(event) {
+    window.addEventListener('scroll', function (event) {
         getClosestSection();
 
     });
@@ -269,78 +270,78 @@ burger.onclick = function myFunction() {
 /*скрипт мобильного меню*/
 
 
-window.addEventListener('resize', function(event){
+window.addEventListener('resize', function (event) {
 
-const mediaQuery = window.matchMedia('(max-width: 992px)')
-if (mediaQuery.matches) {
+    const mediaQuery = window.matchMedia('(max-width: 992px)')
+    if (mediaQuery.matches) {
 
-let nav = document.querySelector('nav')
-let openSubmenuCatalog = document.getElementById('openCatalog');
-let closeSubmenuCatalog = document.querySelector('.catalog-menu_prev');
-let catalogMenu = document.getElementById('catalogMenu');
-let mobileInfoHide = document.getElementById('infoItems');
-let navItems = document.getElementById('navItems');
-let navCatalog = document.getElementById('navCatalog');
+        let nav = document.querySelector('nav')
+        let openSubmenuCatalog = document.getElementById('openCatalog');
+        let closeSubmenuCatalog = document.querySelector('.catalog-menu_prev');
+        let catalogMenu = document.getElementById('catalogMenu');
+        let mobileInfoHide = document.getElementById('infoItems');
+        let navItems = document.getElementById('navItems');
+        let navCatalog = document.getElementById('navCatalog');
 
 
-    openSubmenuCatalog.onclick = () => {
-        navItems.style.display = "none";
-        catalogMenu.style.display= "block";
-        mobileInfoHide.style.display = "none";
-    };
+        openSubmenuCatalog.onclick = () => {
+            navItems.style.display = "none";
+            catalogMenu.style.display = "block";
+            mobileInfoHide.style.display = "none";
+        };
 
-    closeSubmenuCatalog.onclick = () =>  {
-        catalogMenu.style.display= "none";
-        navItems.style.display = "flex";
-        mobileInfoHide.style.display = "block";
-    };
+        closeSubmenuCatalog.onclick = () => {
+            catalogMenu.style.display = "none";
+            navItems.style.display = "flex";
+            mobileInfoHide.style.display = "block";
+        };
 
-     (function() {
+        (function () {
 
-        let allOpenLink = document.querySelectorAll('.dropdown-menu>a');
+            let allOpenLink = document.querySelectorAll('.dropdown-menu>a');
 
-        // loop through each expandable element, adding click listener
-         allOpenLink.forEach(el => {
-            el.addEventListener(
-                'click',
-                function myfunc() {
-                    let res = el.nextElementSibling; // подменю ul
-                    res.classList.add('open')
-                    if (res.classList.contains('open')) {
-                        nav.append(res);
-                    }
-                    navCatalog.style.display = "none";
-
-                    if (el.closest('#navItems')) {
-                        navItems.style.display = "none";
-                        mobileInfoHide.style.display = "none";
-                    }
-
-                    res.firstElementChild.onclick = () =>  {
-                        el.after(res);
-                        res.classList.remove('open')
-                        navCatalog.style.display = "block";
+            // loop through each expandable element, adding click listener
+            allOpenLink.forEach(el => {
+                el.addEventListener(
+                    'click',
+                    function myfunc() {
+                        let res = el.nextElementSibling; // подменю ul
+                        res.classList.add('open')
+                        if (res.classList.contains('open')) {
+                            nav.append(res);
+                        }
+                        navCatalog.style.display = "none";
 
                         if (el.closest('#navItems')) {
-                            navItems.style.display = "block";
-                            mobileInfoHide.style.display = "block";
+                            navItems.style.display = "none";
+                            mobileInfoHide.style.display = "none";
                         }
 
-                    };
-                },
-                true
-            )
-        });
-    })();
+                        res.firstElementChild.onclick = () => {
+                            el.after(res);
+                            res.classList.remove('open')
+                            navCatalog.style.display = "block";
+
+                            if (el.closest('#navItems')) {
+                                navItems.style.display = "block";
+                                mobileInfoHide.style.display = "block";
+                            }
+
+                        };
+                    },
+                    true
+                )
+            });
+        })();
 
 
-}
+    }
 });
 
 
 $('[data-fancybox]').fancybox({
-    animationEffect  : false,
-    zoomOpacity : false,
+    animationEffect: false,
+    zoomOpacity: false,
 })
 
 
