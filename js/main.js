@@ -86,7 +86,7 @@ $(document).ready(function () {
         ]
     });
 
-    $('#all-doctors-slider, #gynecologists-slider').slick({
+    $('.doctors-slider').slick({
 
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -173,9 +173,8 @@ $('.selectDoctors').each(function (index, element) {
                         if (slidersProduct[i].getAttribute('data-value') == chooseItem) {
                             slidersProduct[i].classList.add('show');
                             slidersProduct[i].classList.remove('hide');
-                            /*след  строки нужны для того чтобы слик слайдер не съезжал при смене блоков. Новые слайдеры добавлять сюда.*/
-                            //$('#all-doctors-slider').slick('setPosition');
-                            //$('#gynecologists-slider').slick('setPosition');
+                            /*след  строка нужны для того чтобы слик слайдер не съезжал при смене блоков.*/
+                            $('.doctors-slider').slick('setPosition');
                         }
                         else {
                             slidersProduct[i].classList.remove('show');
